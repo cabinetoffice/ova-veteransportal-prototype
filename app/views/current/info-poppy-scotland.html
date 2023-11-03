@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Choose what you’d like to do next– {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Choose what you'd like to do next
+      </h1>
+
+      <p>You can apply for a general grant with Poppy Scotland by calling the helpline by emailing them or visiting their website.</p>
+
+      <form class="form" action="/path/of/next/page" method="post">
+
+        <h2 class="govuk-heading-s">Contact Poppy Scotland</h2>
+        <ul class="govuk-list">
+          <li>Telephone: 0131 550 1557</li>
+          <li>Email: name@example.com</li>
+          <li>Visit the Poppy Scotland <a class="govuk-link" href="#">website</a></li>
+          <!-- <li>We aim to respond within 2 working days</li> -->
+        </ul>
+
+        <h2 class="govuk-heading-m">Prefer to be contacted?</h2>
+
+        <p>We can pass your details on to the team at Poppy Scotland. Someone will be in touch with you within 7 working days to discuss your needs. </p>
+
+
+
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

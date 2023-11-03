@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What do you need a grant for? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What do you need a grant for?
+      </h1>
+
+      <form class="form" action="/current/search-results-specific" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where do you live?
+              </h1>
+            </legend> -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType" name="financeType" type="radio" value="basic living expenses">
+                <label class="govuk-label govuk-radios__label" for="financeType">
+                  Energy saving upgrades
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-2" name="financeType" type="radio" value="housing related costs">
+                <label class="govuk-label govuk-radios__label" for="financeType-2">
+                  Mobility aids for a disability or long term health conditions
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-3" name="financeType" type="radio" value="medical costs">
+                <label class="govuk-label govuk-radios__label" for="financeType-3">
+                  Alterations to your home
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-4" name="financeType" type="radio" value="costs associated with a disability">
+                <label class="govuk-label govuk-radios__label" for="financeType-4">
+                  Other / general grant
+                </label>
+              </div>
+             
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+

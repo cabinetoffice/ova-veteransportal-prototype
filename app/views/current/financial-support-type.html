@@ -20,56 +20,47 @@ What do you need help with? – {{ serviceName }} – GOV.UK Prototype Kit
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What do you need help with?
+        What kind of financial support do you need?
       </h1>
 
-      <form class="form" action="/current/financial-support-info" method="post">
+      <form class="form" action="/current/grant-reasons" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+          <fieldset class="govuk-fieldset">
             <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                What is your nationality?
+                Where do you live?
               </h1>
-            </legend>
-            <div id="nationality-hint" class="govuk-hint">
-              If you have dual nationality, select all options that are relevant to you.
-            </div> -->
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType" name="helpType" type="checkbox" value="finance" aria-describedby="nationality-item-hint">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality">
-                  Finance
+            </legend> -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grantReasons" name="grantReasons" type="radio" value="benefits">
+                <label class="govuk-label govuk-radios__label" for="grantReasons">
+                  Benefits
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType-2" name="helpType" type="checkbox" value="housing">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-                  Housing
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grantReasons-2" name="grantReasons" type="radio" value="financial">
+                <label class="govuk-label govuk-radios__label" for="grantReasons-2">
+                  Financial advice
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType-3" name="helpType" type="checkbox" value="employment">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-                  Employment
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grantReasons-3" name="grantReasons" type="radio" value="grants">
+                <label class="govuk-label govuk-radios__label" for="grantReasons-3">
+                  Grants
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType-4" name="helpType" type="checkbox" value="health" aria-describedby="nationality-item-hint">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality">
-                  Health and wellbeing 
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grantReasons-4" name="grantReasons" type="radio" value="reductions">
+                <label class="govuk-label govuk-radios__label" for="grantReasons-4">
+                  Reductions on essential services (such as council tax)
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType-5" name="helpType" type="checkbox" value="social">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-                  Community and social
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="helpType-6" name="helpType" type="checkbox" value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-                  Other   
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="grantReasons-5" name="grantReasons" type="radio" value="discounts-offers">
+                <label class="govuk-label govuk-radios__label" for="grantReasons-5">
+                  Discounts and offers
                 </label>
               </div>
             </div>
