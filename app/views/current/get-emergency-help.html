@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Get emergency financial help
+      </h1>
+
+      <p>If you’re having a financial emergency, there are different types of help including:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>crisis grants</li>
+        <li>other benefits</li>
+        <li>specific grant or support for your needs, for example money that must be spent on something specific like furniture or food vouchers</li>
+      </ul>
+
+      <!-- {{ govukButton({
+        text: "Check what you can get",
+        href: "emergency",
+        isStartButton: true
+      }) }} -->
+
+      <h2 class="govuk-heading-m">
+        Crisis grants 
+      </h2>
+
+      <p>Crisis grants are payments given in financial emergencies. You do not need to pay them back. </p>
+
+      <p>Crisis grants have different names and you apply for them in different ways depending on where you live. If you live in:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>England - it's called the <a href="https://www.gov.uk/cost-living-help-local-council" class="govuk-link" target="_blank">‘Household Support fund’</a> and is available from your local council </li>
+        <li>Scotland - it's called the <a href="https://www.mygov.scot/scottish-welfare-fund/crisis-grants" class="govuk-link" target="_blank">‘Scottish Welfare Fund’</a> and is available from your local council</li>
+        <li>Wales - it's called <a href="https://www.gov.wales/discretionary-assistance-fund-daf/how-apply" class="govuk-link" target="_blank">‘Emergency Assistance Payments’</a> and is available from the Welsh Government</li>
+        <li>Northern Ireland - it's called <a href="https://www.nidirect.gov.uk/contacts/finance-support-service-times-crisis-and-need" class="govuk-link" target="_blank">‘Discretionary Support’</a> and is available from the Northern Ireland Government </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Other benefits
+      </h2>
+
+      <p>If you're having a financial emergency, you may be entitled to benefits. If you're already claiming benefits, you may be entitled to extra money during your financial emergency. </p>
+      <p><a href="https://www.gov.uk/check-benefits-financial-support" class="govuk-link" target="_blank">Check what benefits</a> you're entitled to.</p>
+
+      <h2 class="govuk-heading-m">
+        Specific grant 
+      </h2>
+
+      <p>If you need help with a specific expense, there may be help available from other organisations. For example, if you need help with debt repayment or to buy furniture.</p>
+
+    </div>
+
+    <!-- <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div> -->
+  </div>
+
+{% endblock %}

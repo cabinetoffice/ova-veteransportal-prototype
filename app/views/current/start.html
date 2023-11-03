@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Section",
+        href: "#"
+      },
+      {
+        text: "Subsection"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Financial help for veterans
+      </h1>
+
+      <p>If you’re a veteran in the UK, there are different types of financial help  available. These include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>grants (these are payments you do not need to pay back)</li>
+        <li>benefits for veterans, for example the Armed Forces Independence Payment</li>
+        <li>general benefits for everyone</li>
+        <li>discounts, for example reduced council tax payments</li>
+      </ul>
+
+      {{ govukButton({
+        text: "Check what you can get",
+        href: "emergency",
+        isStartButton: true
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Grants
+      </h2>
+
+      <p>Grants (sometimes called ‘financial assistance’) are one-off payments. There are different types of grants available for veterans, including:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>general grants (you can spend the money on whatever you need)</li>
+        <li>specific grants (you must spend the money on something specific, for example debt repayment)</li>
+        <li>crisis grants (you may need to prove that you have a financial emergency)</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Loans
+      </h2>
+
+      <p>Loans are money you borrow and need to pay back. There are different types of loans available for veterans, including: </p>
+
+    </div>
+
+    <!-- <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Subsection
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Subsection</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div> -->
+  </div>
+
+{% endblock %}

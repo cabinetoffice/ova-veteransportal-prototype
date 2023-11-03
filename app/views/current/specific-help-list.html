@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        I need help with...
+      </h1>
+
+      <form class="form" action="/current/search-results-specific" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where do you live?
+              </h1>
+            </legend> -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType" name="financeType" type="radio" value="basic living expenses">
+                <label class="govuk-label govuk-radios__label" for="financeType">
+                  Basic living expenses, for example food or energy bills
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-2" name="financeType" type="radio" value="housing related costs">
+                <label class="govuk-label govuk-radios__label" for="financeType-2">
+                  Housing related costs, including rent and household goods
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-3" name="financeType" type="radio" value="medical costs">
+                <label class="govuk-label govuk-radios__label" for="financeType-3">
+                  Medical costs
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-4" name="financeType" type="radio" value="costs associated with a disability">
+                <label class="govuk-label govuk-radios__label" for="financeType-4">
+                  Costs associated with a disability for you or a family member, including house adaptions 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-5" name="financeType" type="radio" value="employment, education, or training costs">
+                <label class="govuk-label govuk-radios__label" for="financeType-5">
+                  Employment, education, or training costs
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-6" name="financeType" type="radio" value="XXXXX">
+                <label class="govuk-label govuk-radios__label" for="financeType-6">
+                  Funeral costs
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-7" name="financeType" type="radio" value="XXXXX">
+                <label class="govuk-label govuk-radios__label" for="financeType-7">
+                  Maternity costs
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-8" name="financeType" type="radio" value="XXXXX">
+                <label class="govuk-label govuk-radios__label" for="financeType-8">
+                  Loan or debt repayment
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-9" name="financeType" type="radio" value="XXXXX">
+                <label class="govuk-label govuk-radios__label" for="financeType-9">
+                  Travel and transport costs 
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="financeType-10" name="financeType" type="radio" value="XXXXX">
+                <label class="govuk-label govuk-radios__label" for="financeType-10">
+                  Wedding costs 
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+
