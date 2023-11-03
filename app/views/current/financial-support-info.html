@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Financial support for veterans
+      </h1>
+
+      <p>As well as the benefits that are available to all UK citizens there are many kinds of financial support that are only available for veterans.</p>
+
+      <p>These include:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>benefits</li>
+        <li>financial advice</li>
+        <li>grants</li>
+        <li>discounts on services (like council tax)</li>
+        <li>discounts on non-government services (like rail travel)</li>
+        <li>special offers from retail and entertainment businesses</li>
+      </ul>
+
+      {{ govukButton({
+        text: "Check what you can get",
+        href: "financial-support-type",
+        isStartButton: true
+      }) }}
+
+     
+
+{% endblock %}

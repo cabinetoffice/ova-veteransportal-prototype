@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Do you have a veteran's ID card? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Do you have a veteran's ID card?
+      </h1>
+
+      <form class="form" action="/vets-id-card" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where do you live?
+              </h1>
+            </legend> -->
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vetsIdCard" name="vetsIdCard" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="vetsIdCard">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vetsIdCard-2" name="vetsIdCard" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="vetsIdCard-2">
+                  No
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="vetsIdCard-3" name="vetsIdCard" type="radio" value="Applied">
+                <label class="govuk-label govuk-radios__label" for="vetsIdCard-3">
+                  I've applied for one but not received it yet
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
