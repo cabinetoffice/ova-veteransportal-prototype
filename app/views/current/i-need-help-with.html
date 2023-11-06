@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+What do you need help with? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% include "emergency-banner.html" %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What do you need help with?
+      </h1>
+
+      <form class="form" action="/current/financial-support-info" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is your nationality?
+              </h1>
+            </legend>
+            <div id="nationality-hint" class="govuk-hint">
+              If you have dual nationality, select all options that are relevant to you.
+            </div> -->
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType" name="helpType" type="checkbox" value="finance" aria-describedby="nationality-item-hint">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                  Finance
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Help with finances, benefits, war pensions and compensation.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType-2" name="helpType" type="checkbox" value="housing">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                  Housing
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Help with renting or buying properties, eviction, homelessness, service accommodation, care homes and supported housing.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType-3" name="helpType" type="checkbox" value="employment">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Employment
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Help with education and training, job seeking, self-employment and support for offenders.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType-4" name="helpType" type="checkbox" value="health" aria-describedby="nationality-item-hint">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                  Health and wellbeing 
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Help with mental wellbeing, accessing support and bereavement.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType-5" name="helpType" type="checkbox" value="social">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                  Community and social
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  See what groups and communities are in your area.
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="helpType-6" name="helpType" type="checkbox" value="other">
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Other   
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  There are grants available for specific things like wedding and funeral costs
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

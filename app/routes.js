@@ -31,3 +31,17 @@ router.post('/finance-type', function(request, response) {
         response.redirect("/ineligible")
     }
 })
+
+router.post('/vets-id-card', function(request, response) {
+
+    var vetsIdCard = request.session.data['vetsIdCard']
+    if (vetsIdCard == "Yes"){
+        response.redirect("/current/veterans-id-card-details")
+    } else if (vetsIdCard == "No"){
+        response.redirect("#")
+    } else if (vetsIdCard == "Applied"){
+        response.redirect("#")
+    } else {
+        response.redirect("/ineligible")
+    }
+})
