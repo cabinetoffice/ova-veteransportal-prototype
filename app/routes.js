@@ -38,10 +38,20 @@ router.post('/vets-id-card', function(request, response) {
     if (vetsIdCard == "Yes"){
         response.redirect("/current/veterans-id-card-details")
     } else if (vetsIdCard == "No"){
-        response.redirect("#")
+        response.redirect("/current/service-details")
     } else if (vetsIdCard == "Applied"){
-        response.redirect("#")
+        response.redirect("/current/service-details")
     } else {
         response.redirect("/ineligible")
+    }
+})
+
+router.post('/is-eligible', function(request, response) {
+    var eligible = request.session.data['eligible']
+
+    if (eligible == "no") {
+        response.redirect("/current/not-eligible")
+    } else {
+        response.redirect("/current/i-need-help-with")
     }
 })
