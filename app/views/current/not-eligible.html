@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        You are not eligible to use this service
+      </h1>
+
+      <p>
+        This service is for people who have left active service and are now classed as veterans. 
+      </p>
+
+      <p>
+        You can find information about the support available to you as a member of the armed forces at <a href="https://www.gov.uk/government/collections/support-services-for-military-and-defence-personnel-and-their-families">Contact the [service] Help</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
