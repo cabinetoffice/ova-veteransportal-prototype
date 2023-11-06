@@ -20,7 +20,6 @@
 
       <form class="form" action="/current/full-name" method="post">
 
-        <p>
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -43,7 +42,7 @@
                     <label class="govuk-label" for="contact-by-email">
                       Email address
                     </label>
-                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
+                    <input class="govuk-input govuk-input--width-20" id="contact-by-email" name="contactByEmail" type="email" spellcheck="false" autocomplete="email">
                   </div>
                 </div>
                 <div class="govuk-checkboxes__item">
@@ -57,7 +56,7 @@
                     <label class="govuk-label" for="contact-by-phone">
                       Phone number
                     </label>
-                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
+                    <input class="govuk-input govuk-input--width-20" id="contact-by-phone" name="contactByPhone" type="tel" autocomplete="tel">
                   </div>
                 </div>
                 <div class="govuk-checkboxes__item">
@@ -71,7 +70,7 @@
                     <label class="govuk-label" for="contact-by-text">
                       Mobile phone number
                     </label>
-                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+                    <input class="govuk-input govuk-input--width-20" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
                   </div>
                 </div>
 
@@ -85,7 +84,6 @@
               </div>
             </fieldset>
           </div>
-        </p>
 
         {{ govukButton({
           text: "Continue"

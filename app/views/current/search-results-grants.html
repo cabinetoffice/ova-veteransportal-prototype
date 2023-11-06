@@ -4,6 +4,13 @@
   GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
 {% block content %}
 
 {% include "emergency-banner.html" %}
@@ -19,6 +26,13 @@
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
+
+        <p>We found the following results for grants that you are eligible to apply for.</p>
+
+        <p>Click on the organisation you’re interested in finding out more about below. You can then chose whether to get in touch with them yourself or ask to be contacted. </p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
         <!-- <h1 class="govuk-heading-l">
           one third
         </h1> -->
