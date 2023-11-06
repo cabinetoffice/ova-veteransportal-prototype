@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+{% include "emergency-banner.html" %}
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">
+          Search results 
+          <!-- for {{ data['financeType'] }} -->
+        </h1>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <!-- <h1 class="govuk-heading-l">
+          one third
+        </h1> -->
+        <h2 class="govuk-heading-m">
+          <a href="info-poppy-scotland">Poppy Scotland</a>
+        </h2>
+        <p>
+          You can apply for a general grant with Poppy Scotland by calling the helpline on 0131 550 1557 or <a href="#">email</a>  them and we can get the process going.
+        </p>
+        <p>
+          Visit <a href="https://www.poppyscotland.org.uk/get-help/financial-support" target="_blank">Scotland's financial support page</a>  to find out more. 
+        </p>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">
+          <a href="#">Royal Air Force (RAF) Benevolent Fund</a>
+        </h2>
+        <p>
+          Apply for Financial Assistance from the RAF Benevolent Fund by using the <a href="https://www.lightningreach.org/application-portal" target="_blank">Lightning Reach portal</a> .
+        </p>
+        <p>
+          Visit <a href="https://www.rafbf.org/get-support/financial-assistance/apply-for-financial-help" target="_blank">RAF Benevolent Fund apply page</a>  to find out more. 
+        </p>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">
+          <a href="#">The Royal British Legion (RBL)</a>
+        </h2>
+        <p>
+          Apply for the RBL Cost of Living Grant using the <a href="https://www.lightningreach.org/application-portal?referral=rbl" target="_blank"> Lightning Reach portal</a>. 
+        </p>
+        <p>
+          Visit <a href="https://www.britishlegion.org.uk/get-support/financial-and-employment-support/finance/grants/cost-of-living-grants" target="_blank">RBL Cost of Living grant page</a>  to find out more. 
+        </p>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        
+
+      </div>
+
+
+    <div class="govuk-grid-column-one-third">
+      <!-- <h1 class="govuk-heading-l">
+        two thirds
+      </h1>
+      <p><a href="info-poppy-scotland">poppy scotland</a></p> -->
+    </div>
+  </div>
+
+
+
+{% endblock %}
+
+
+    

@@ -38,9 +38,9 @@ router.post('/vets-id-card', function(request, response) {
     if (vetsIdCard == "Yes"){
         response.redirect("/current/veterans-id-card-details")
     } else if (vetsIdCard == "No"){
-        response.redirect("#")
+        response.redirect("/current/service-number")
     } else if (vetsIdCard == "Applied"){
-        response.redirect("#")
+        response.redirect("/current/service-number")
     } else {
         response.redirect("/ineligible")
     }
