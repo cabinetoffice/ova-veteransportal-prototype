@@ -31,45 +31,45 @@
 
 {% block content %}
 
+{% include "emergency-banner.html" %}
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Financial help for veterans
+        Find out what support is available to veterans in your area
       </h1>
 
-      <p>If you’re a veteran in the UK, there are different types of financial help  available. These include:</p>
+      <p>There are many services available to veterans, ranging from emergency help to practical support with things like transitioning to civilian life, housing and pensions. </p>
+      <p>Use this tool to find the support you can access in the area you live in.</p>
+      <p>You will be able to check and save or print your answers at the end.</p>
+      <p>You can then choose to contact the organisations that can help you yourself, or ask to be contacted by them.</p>
 
-      <ul class="govuk-list govuk-list--bullet">
+      <!-- <ul class="govuk-list govuk-list--bullet">
         <li>grants (these are payments you do not need to pay back)</li>
         <li>benefits for veterans, for example the Armed Forces Independence Payment</li>
         <li>general benefits for everyone</li>
         <li>discounts, for example reduced council tax payments</li>
-      </ul>
+      </ul> -->
 
       {{ govukButton({
-        text: "Check what you can get",
-        href: "emergency",
+        text: "Start now",
+        href: "#",
         isStartButton: true
       }) }}
 
       <h2 class="govuk-heading-m">
-        Grants
+        Explore this topic
       </h2>
 
-      <p>Grants (sometimes called ‘financial assistance’) are one-off payments. There are different types of grants available for veterans, including:</p>
+      <p>
+        <a href="https://www.gov.uk/guidance/national-services-that-offer-support-to-veterans" target="_blank">National services that offer support to veterans</a>
+      </p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>general grants (you can spend the money on whatever you need)</li>
-        <li>specific grants (you must spend the money on something specific, for example debt repayment)</li>
-        <li>crisis grants (you may need to prove that you have a financial emergency)</li>
-      </ul>
 
-      <h2 class="govuk-heading-m">
-        Loans
-      </h2>
 
-      <p>Loans are money you borrow and need to pay back. There are different types of loans available for veterans, including: </p>
+
 
     </div>
 
