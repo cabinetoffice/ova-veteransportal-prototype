@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row"> 
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/current/full-name" method="post">
+
+        <p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-preferences">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  How do you want to be contacted?
+                </h1>
+              </legend>
+              <div id="contact-preferences" class="govuk-hint">
+                Select as many as you like
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="email" name="email" type="checkbox" value="email">
+                  <label class="govuk-label govuk-checkboxes__label" for="email">
+                    Email
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="text" name="text" type="checkbox" value="text">
+                  <label class="govuk-label govuk-checkboxes__label" for="text">
+                    Text
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="telephone-call" name="telephone-call" type="checkbox" value="telephone call">
+                  <label class="govuk-label govuk-checkboxes__label" for="telephone-call">
+                    Telephone call
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__divider">or</div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="prefer-not-to-be-contacted" name="prefer-not-to-be-contacted" type="checkbox" value="prefere not to be contacted">
+                  <label class="govuk-label govuk-checkboxes__label" for="prefer-not-to-be-contacted">
+                    Prefer not to be contacted
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </p>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

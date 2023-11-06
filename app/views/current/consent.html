@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+items: [{
+text: "Home",
+href: "/"},
+{
+text: "Section",
+href: "#"},
+{
+text: "Subsection"}
+]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Personal Information
+    </h1>
+
+    <p>We need to ask you for some personal information so we can direct you to the most relevant results.
+      You’ll be able to see the information you’ve entered so far as you go along.</p>
+
+    <p>We’ll save your information for 30 days if you need to log back in and continue another time.</p>
+
+    <p>You can save your responses as a pdf or print it out at the end so you can easily review and share your
+      responses.</p>
+
+    {{ govukButton({
+    text: "Continue",
+    href: "/current/service-number",
+    isStartButton: true
+    }) }}
+  </div>
+  {% endblock %}
