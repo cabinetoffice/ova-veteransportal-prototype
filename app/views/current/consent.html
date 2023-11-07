@@ -11,16 +11,9 @@ Start page template – {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block beforeContent %}
 
-{{ govukBreadcrumbs({
-items: [{
-text: "Home",
-href: "/"},
-{
-text: "Section",
-href: "#"},
-{
-text: "Subsection"}
-]
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
 }) }}
 
 {% endblock %}
@@ -32,8 +25,8 @@ text: "Subsection"}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-      Personal Information
+    <h1 class="govuk-heading-l">
+      Personal information
     </h1>
 
     <p>We need to ask you for some personal information so we can direct you to the most relevant results.
@@ -46,8 +39,8 @@ text: "Subsection"}
 
     {{ govukButton({
     text: "Continue",
-    href: "/current/veterans-id-card",
-    isStartButton: true
+    href: "/current/veterans-id-card"
     }) }}
+    
   </div>
   {% endblock %}
