@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Which one of the following best describes you?
+    </h1>
+
+    <p>
+      Veterans are defined as anyone who has served for at least one day in the armed forces (regular or reserve) or
+      merchant mariners who have seen duty on legally defined military operations.
+    </p>
+
+    <form class="form" action="/sprint-003/i-need-help-with" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatBestDescribesYou" name="whatBestDescribesYou" type="radio"
+                value="iAmAVeteran">
+              <label class="govuk-label govuk-radios__label" for="whatBestDescribesYou">
+                I am a veteran
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatBestDescribesYou-2" name="whatBestDescribesYou" type="radio"
+                value="veteranSupport">
+              <label class="govuk-label govuk-radios__label" for="whatBestDescribesYou-2">
+                I am a family member of a veteran
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatBestDescribesYou-3" name="whatBestDescribesYou" type="radio"
+                value="onBehalfOfSomeone">
+              <label class="govuk-label govuk-radios__label" for="whatBestDescribesYou-3">
+                I am currently in the armed forces and preparing for discharge
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

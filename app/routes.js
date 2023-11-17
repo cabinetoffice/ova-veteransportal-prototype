@@ -55,3 +55,13 @@ router.post('/is-eligible', function(request, response) {
         response.redirect("/current/i-need-help-with")
     }
 })
+
+router.post('/sprint-003/does-consent', function(request, response) {
+    var consent = request.session.data['doYouConsentToRefer']
+
+    if (consent == "no") {
+        response.redirect("/sprint-003/not-eligible")
+    } else {
+        response.redirect("/sprint-003/contact-preferences")
+    }
+})

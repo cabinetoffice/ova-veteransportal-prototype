@@ -6,9 +6,9 @@
     "serve": "govuk-prototype-kit serve",
     "start": "govuk-prototype-kit start"
   },
-  "dependencies": { 
+  "dependencies": {
     "@govuk-prototype-kit/common-templates": "1.2.2",
     "govuk-frontend": "4.7.0",
-    "govuk-prototype-kit": "13.13.5"
+    "govuk-prototype-kit": "13.15.0"
   }
 }

@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Data protection
+    </h1>
+
+    <h2 class="govuk-heading-m">
+      How this service will collect and use your personal information
+    </h2>
+
+    <p>
+      The Ministry of Defence (MOD) is committed to protecting the privacy and security of your personal data and the
+      MOD Privacy Notice explains your rights and provides information that you are entitled to under UK data
+      protection
+      legislation. It is important that you read this notice, together with any other privacy notice that may be
+      provided when we collect or process personal information about you so that
+    </p>
+
+
+    <form class="form" action="/sprint-003/full-name" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-heading-m">
+              Do you consent to the above?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="doYouConsent" name="doYouConsent" type="radio" value="Yes">
+              <label class="govuk-label govuk-radios__label" for="doYouConsent">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="doYouConsent-2" name="doYouConsent" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="doYouConsent-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
