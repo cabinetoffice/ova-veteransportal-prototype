@@ -56,12 +56,22 @@ router.post('/is-eligible', function(request, response) {
     }
 })
 
-router.post('/sprint-003/does-consent', function(request, response) {
-    var consent = request.session.data['doYouConsentToRefer']
+router.post('/sprint-003/does-consent-to-contact', function(request, response) {
+    var consent = request.session.data['doYouConsentToContact']
 
     if (consent == "no") {
         response.redirect("/sprint-003/not-eligible")
     } else {
         response.redirect("/sprint-003/contact-preferences")
+    }
+})
+
+router.post('/sprint-003/does-consent-to-refer', function(request, response) {
+    var consent = request.session.data['doYouConsentToRefer']
+
+    if (consent == "no") {
+        response.redirect("/sprint-003/refer-not-eligible")
+    } else {
+        response.redirect("/sprint-003/full-name")
     }
 })

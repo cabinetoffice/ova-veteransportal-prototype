@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      You have not consented to be referred to Veterans UK
+    </h1>
+
+    <p>If you would like to explore other support options or request another referral please return to the
+      <a href="/sprint-003/start/main">support
+        services for veterans start page</a>
+    </p>
+  </div>
+</div>
+
+{% endblock %}
