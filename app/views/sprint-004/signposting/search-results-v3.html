@@ -1,0 +1,264 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .card {
+    background: #f3f2f1;
+    padding: 15px;
+    border: 1px solid #b1b4b6;
+    margin-bottom: 40px;
+  }
+</style>
+
+{% include "emergency-banner.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Find support for veterans and their families
+    </h1>
+    <p>Use this signposting tool to find the most relevant information about services for veterans of the armed forces
+      in the UK.
+    </p>
+    <p>You can filter results by your location in the UK and the support services you need information about.</p>
+    <p>Information is divided into:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        Government services e.g. Ministry of Defence, the Department for Work and Pensions, NHS and other government
+        funded initiatives.
+      </li>
+      <li>
+        Charities and other non-governmental organisations that have asked to be listed on GOV.UK as providers of
+        specialist support to the veteran community.
+      </li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      Defence Business Services provides welfare support for veterans who left service in the last two years. If you
+      request a referral to them, we will check which year you left service to ensure you are eligible.
+    </div>
+
+
+  </div>
+</div>
+
+<br>
+
+<div id="passport-issued-hint" class="govuk-hint">
+  <a href="#">(clear filters)</a>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+
+    <div class="card">
+
+      <h2 class="govuk-heading-m">
+        Filter results
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        By location
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h3 class="govuk-heading-s">
+        By topic
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="topic">
+                Finance and benefits
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-2">
+                Physical health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-4" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-4">
+                Employment and training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-5">
+                Housing 
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-6" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-6">
+                Family and children
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-7" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-7">
+                Community and volunteering
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Apply filters",
+      href: "#"
+      }) }}
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">
+      Mental health
+    </h2>
+
+    <h2 class="govuk-heading-l">
+      Government services
+    </h2>
+
+
+    <div class="card">
+      <h2 class="govuk-heading-m" style="float: left;">
+        Op Courage
+      </h2>
+      <strong class="govuk-tag" style="float: right;">
+        Goverment service
+      </strong>
+      <p style="clear: both;">Op Courage is an NHS mental health specialist service designed to help serving personnel
+        due to leave the military, reservists, armed forces veterans and their families.</p>
+      <a href="#" class="govuk-heading-s"> Get a referral to Op Courage</a>
+    </div>
+
+    <h2 class="govuk-heading-l">
+      Charities and other organisations
+    </h2>
+
+    <p>
+      <a href="https://combatstress.org.uk/">Combat Stress</a> <br>Combat Stress offers therapeutic and clinical community and residential
+      treatment to former members of the UK armed forces who are suffering from a range of mental health conditions;
+      including post traumatic stress disorder.
+    </p>
+  
+    <p>
+      <a href="https://www.helpforheroes.org.uk/">Help for Heroes</a> <br>Help for Heroes supports veterans and serving members of the uk armed forces
+      community with their physical and mental health, as well as their financial, social and welfare needs.
+    </p>
+
+    <p>
+      <a href="https://ptsdresolution.org/">PTSD Resolution</a> <br>PTSD Resolution helps veterans, reservists and families who are struggling to
+      reintegrate into a normal work & family life because of trauma suffered during military service and other adverse
+      life events.
+    </p>
+    <p>
+      <a href="https://walkingwiththewounded.org.uk/">Walking with the Wounded</a> <br>Walking with the wounded supports veterans and their families with
+      mental health, employment and care coordination following discharge from service.
+    </p>
+
+    <hr>
+
+    <br>
+
+    <h2 class="govuk-heading-l">
+      Housing
+    </h2>
+
+    <h2 class="govuk-heading-l">
+      Government services
+    </h2>
+
+
+    <div class="card">
+      <h2 class="govuk-heading-m" style="float: left;">
+        Op Fortitude
+      </h2>
+      <strong class="govuk-tag" style="float: right;">
+        Goverment service
+      </strong>
+      <p style="clear: both;">Op Fortitude is a government funded service run in partnership with Riverside Housing. It
+        was launched in September 2023 to provide supported housing to veterans who are homeless or in danger of
+        becoming homeless.</p>
+      <a href="#" class="govuk-heading-s"> Get a referral to Op Fortitude</a>
+    </div>
+
+    <h2 class="govuk-heading-l">
+      Charities and other organisations
+    </h2>
+
+    <p>
+      <a href="#">Amicus</a> <br>Support for homeless veterans in partnership with the Royal British Legion.
+    </p>
+    <p>
+      <a href="https://www.stoll.org.uk/">Stoll</a> <br>Provides support and access to social housing for veterans.
+    </p>
+    <p>
+      <a href="https://www.britishlegion.org.uk/">Royal British Legion</a> <br>Offers advice and support to veterans including signposting to regional support.
+    </p>
+    <p>
+      <a href="https://www.haighousing.org.uk/">Haig housing</a> <br>A housing association that provides housing for veterans and their families across the UK.
+    </p>
+    <p>
+      <a href="https://veteranslaunchpad.org.uk/">Veterans launchpad</a> <br>Provides accommodation and support to help veterans make a successful transition from military to civilian life.
+    </p>
+    <hr> 
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

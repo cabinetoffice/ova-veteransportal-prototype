@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Section",
+href: "#"
+},
+{
+text: "Subsection"
+}
+]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+{% include "emergency-banner.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Find support for veterans and their families
+    </h1>
+
+    <h2 class="govuk-heading-m">
+      Signposting tool
+    </h2>
+
+    <p>
+      Search information about services for veterans of the armed forces in the UK.
+    </p>
+
+    <p>
+      You can filter results by location and the topics you need support with.
+    </p>
+
+    <h2 class="govuk-heading-m">
+      Referral service
+    </h2>
+
+    <p>
+      You can choose to apply directly to some government-run or backed services directly using the online referral
+      service.
+    </p>
+
+    <div class="govuk-inset-text">
+      If you use the referral service, you will be asked to give consent to share your information with the provider of
+      the service you are applying to.
+    </div>
+
+    {{ govukButton({
+    text: "Start now",
+    href: "/sprint-004/signposting/when-did-you-leave",
+    isStartButton: true
+    }) }}
+
+    <h2 class="govuk-heading-s">
+      If you need help using this service contact Defence Business Services
+    </h2>
+
+    <p>
+      Freephone (UK only): 0808 1914 2 18 <br>
+      Telephone (overseas): +44 1253 866 043 <br>
+      8.00 am to 5:00 pm Monday to Friday <br>
+    </p>
+
+    <p>When the helpline is closed, callers will be given the option to be routed to The Samaritans 24hr helpline.</p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+  </div>
+</div>
+
+{% endblock %}
