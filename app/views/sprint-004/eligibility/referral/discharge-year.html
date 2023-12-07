@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ 
+      <h1 class="govuk-heading-l">
+        What year did you leave service?
+      </h1>
+
+      <form class="form" action="/sprint-003/check-answers" method="post">
+
+        <!-- <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m " for="service-number">
+              Service number
+            </label>
+          </h2> 
+          <input class="govuk-input govuk-input--width-20" id="service-number" name="serviceNumber" type="text">
+        </div> -->
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--m " for="service-number">
+                  Year of discharge
+                </label>
+              </h2> 
+            </legend> -->
+            <!-- <div id="passport-issued-hint" class="govuk-hint">
+              What date did you leave the armed forces? If you are still in active service enter the year you expect to be discharged.
+            </div> -->
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="discharge-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discharge-year" name="discharge-year" type="text" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

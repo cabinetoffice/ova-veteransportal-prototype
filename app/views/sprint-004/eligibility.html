@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Based on your answers, we think you could receive support from Veterans UK
+    </h1>
+
+    <div>
+      <p>
+        Veterans UK offer support services delivered through the Veterans Welfare Service (VWS) and the Defence
+        Transition Services (DTS).
+      </p>
+      <p>
+        Veterans UK offers support to those who are in active service, veterans or military families.
+      </p>
+    </div>
+
+    <form class="form" action="/path/of/next/page" method="post">
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

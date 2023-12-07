@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Where are you located?
+    </h1>
+
+    <p>
+      We understand that you may not have a permanent address, or could be in the process of relocating. But by telling
+      us about the area you plan to live in, we can connect you with the best support for you locally.
+    </p>
+
+    <form class="form" action="/sprint-003/local-support" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label" for="postcode">
+            Enter a postcode
+          </label>
+          <p class="govuk-hint">For example SW1A 2AA</p>
+        </h1>
+        <input class="govuk-input govuk-input--width-30" id="postcode" name="postcode" type="text">
+      </div>
+
+      {{ govukButton({
+      text: "Find"
+      }) }}
+
+    </form>
+
+    <div class="govuk-warning-text govuk-grid-column-two-thirds">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        If you need immediate help go to
+        <a class="govuk-notification-banner__link" href="https://www.gov.uk/guidance/urgent-help-for-veterans"> urgent
+          help for veterans</a>
+      </strong>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

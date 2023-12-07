@@ -1,0 +1,114 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Support service
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for this page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Section",
+href: "#"
+},
+{
+text: "Subsection"
+}
+]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-hint">
+      Guidance
+    </h1>
+    <h1 class="govuk-heading-xl">
+      Support services for veterans
+    </h1>
+
+    <p>
+      Use this service to search for support for veterans and their families. <br> You can:
+    <ul class="govuk-list govuk-list--bullet">
+      <li>search for different kinds of support</li>
+      <li>request a referral to a government service </li>
+      <li>explore a range of support options from other organisations</li>
+    </ul>
+    </p>
+
+
+    <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+      <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide"
+        role="navigation">
+        <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+          Contents
+        </h2>
+        <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+            <a href="#">
+              Accommodation and relocation
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Family and children
+            </a>
+          </li>
+          <li aria-current="true"
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="/sprint-003/start/finance">
+              Finance and benefits
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+            <a href="#">
+              Physical health
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Mental health, addiction and stress
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Training, education and employment
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="govuk-warning-text govuk-grid-column-one-third">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      If you need immediate help go to
+      <a class="govuk-notification-banner__link" href="https://www.gov.uk/guidance/urgent-help-for-veterans"> urgent
+        help for veterans</a>
+    </strong>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,388 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .card {
+    background:#f3f2f1;
+    padding: 15px;
+    border: 1px solid #b1b4b6;
+    margin-bottom: 40px;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Help available based on your answers
+    </h1>
+
+    <h2 class="govuk-heading-l">
+      Government  services
+    </h2>
+    <p>These services are run or funded by the UK government. You can use the referral service to apply directly.</p>
+
+    
+
+  <div class="card">
+    <!-- <span class="govuk-caption-m govuk-!-margin-top-0">Mental health</span> -->
+    <h2 class="govuk-heading-m">
+      Op Couraage
+    </h2>
+    <p>Op COURAGE is an NHS mental health specialist service designed to help serving personnel due to leave the military, reservists, armed forces veterans and their families.</p>
+    <a href="#" class="govuk-heading-s">Request a referral for Op Courage</a>
+  </div>
+
+  <!-- <div class="card">
+    <h2 class="govuk-heading-m">
+      Op Fortitude
+    </h2>
+    <p>Op FORTITUDE is funded by The Armed Forces Covenant Fund to deliver a centralised referral pathway into supported housing.</p>
+    <a href="#" class="govuk-heading-s"> Get a referral to Op Fortitude</a>
+  </div> -->
+
+  <div class="card">
+    <!-- <span class="govuk-caption-m govuk-!-margin-top-0">Mental health</span> -->
+    <h2 class="govuk-heading-m" style="float: left;">
+      Defence Transition Services  
+    </h2>
+    <p style="clear: both;">The Defence Transition Services (DTS) team is helps service personnel with the transition to civilian life and is the first point of contact for support in the two years following discharge.</p>
+    <a href="#" class="govuk-heading-s">Get a referral to Defence Transition Services</a>
+  </div>
+
+  <h2 class="govuk-heading-l">
+    Other help available from charities
+  </h2>
+
+  <p>This a selection of organisations that have applied to be included in this signposting service. </p>
+  <p>It's their responsibility to maintain and update their information. We cannot take responsibility for the content of their sites.</p>
+   
+  </div>
+</div>
+
+<br>
+
+<!-- <h2 class="govuk-heading-m">
+  Other help available from  234 charities
+</h2> -->
+
+<!-- <div id="passport-issued-hint" class="govuk-hint">
+  Displaying results based on  the
+following filters 
+    <a href="#">(clear filters)</a>
+</div> -->
+
+<div class="govuk-grid-row">
+  <!-- <div class="govuk-grid-column-one-third">
+
+    <div class="card">
+
+      <h2 class="govuk-heading-m">
+        Filter results
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        By location
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h3 class="govuk-heading-s">
+        By topic
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="topic">
+                Finance and benefits
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-2">
+                Physical health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-4" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-4">
+                Employment and training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox" value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-5">
+                Accomodation
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-6" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-6">
+                Family and children
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-7" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-7">
+                Community and volunteering
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+        text: "Apply filters",
+        href: "#"
+        }) }}
+
+    </div>
+  </div> -->
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <span class="govuk-caption-m govuk-!-margin-top-3">Mental health</span>
+       <h3 class="govuk-heading-m govuk-!-margin-bottom-0"> <a href="#">Combat Stress</a></h3>
+      </div>
+    </div>
+    <p>
+      Combat Stress offers therapeutic and clinical community and residential treatment to former members of the UK armed forces who are suffering from a range of mental health conditions; including post traumatic stress disorder.
+    </p>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <span class="govuk-caption-m govuk-!-margin-top-3">Mental health</span>
+       <h3 class="govuk-heading-m govuk-!-margin-bottom-0"> <a href="#">Help for Heroes</a></h3>
+      </div>
+    </div>
+    <p>
+      Help for Heroes supports veterans and serving members of the uk armed forces community with their physical and mental health, as well as their financial, social and welfare needs.
+    </p>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <span class="govuk-caption-m govuk-!-margin-top-3">Mental health</span>
+       <h3 class="govuk-heading-m govuk-!-margin-bottom-0"> <a href="#">PTSD Resolution</a></h3>
+      </div>
+    </div>
+    <p>
+      PTSD Resolution helps veterans, reservists and families who are struggling to reintegrate into a normal work & family life because of trauma suffered during military service and other adverse life events. 
+        </p>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <span class="govuk-caption-m govuk-!-margin-top-3">Mental health</span>
+       <h3 class="govuk-heading-m govuk-!-margin-bottom-0"> <a href="#">Walking with the Wounded</a></h3>
+      </div>
+    </div>
+    <p>
+      Walking with the wounded supports veterans and their families with mental health, employment and care coordination following discharge from service.
+        </p>
+    
+    <!-- <dl class="govuk-summary-list govuk-summary-list--no-border">  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can help with 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mental health
+        </dd>
+      </div>
+     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://combatstress.org.uk/">combatstress.org.uk</a>
+        </dd>
+      </div>
+    </dl> -->
+
+    <!-- <hr>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Combat Stress</h3>
+      </div>
+    </div>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can help with 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mental health
+        </dd>
+      </div>
+     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://combatstress.org.uk/">combatstress.org.uk</a>
+        </dd>
+      </div>
+    </dl>
+
+    <hr>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Combat Stress</h3>
+      </div>
+    </div>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can help with 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mental health
+        </dd>
+      </div>
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://combatstress.org.uk/">combatstress.org.uk</a>
+        </dd>
+      </div>
+    </dl>
+
+    <hr>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Combat Stress</h3>
+      </div>
+    </div>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can help with 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mental health
+        </dd>
+      </div>
+    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://combatstress.org.uk/">combatstress.org.uk</a>
+        </dd>
+      </div>
+    </dl>
+
+    <hr>
+
+    <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__key">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Combat Stress</h3>
+      </div>
+    </div>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Can help with 
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Mental health
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Website
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="https://combatstress.org.uk/">combatstress.org.uk</a>
+        </dd>
+      </div>
+    </dl> -->
+
+    <hr>
+     <!-- Pagination-->
+    <br>
+    <nav class="govuk-pagination" role="navigation" aria-label="results">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+    
+  
+  </div>
+</div>
+
+
+{% endblock %}

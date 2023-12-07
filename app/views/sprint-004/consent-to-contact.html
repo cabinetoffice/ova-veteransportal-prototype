@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Consent to be contacted
+    </h1>
+
+    <p>
+      I authorise Veterans UK to contact me about this referral.
+    </p>
+    <p>
+      I understand that email is transmitted over an unsecured network and accept that the Ministry of Defence is not
+      liable for any loss, interception or unauthorised use of information transmitted this way.
+    </p>
+
+
+    <form class="form" action="/sprint-003/does-consent-to-contact" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-heading-m">
+              Do you consent to the above?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="doYouConsentToContact" name="doYouConsentToContact" type="radio"
+                value="Yes">
+              <label class="govuk-label govuk-radios__label" for="doYouConsentToContact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="doYouConsentToContact-2" name="doYouConsentToContact" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="doYouConsentToRefer-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
