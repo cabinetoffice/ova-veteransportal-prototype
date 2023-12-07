@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ 
+      <h1 class="govuk-heading-l">
+        Were you medically discharged?
+      </h1>
+
+      <p>This will be recorded in your summary medical records and/or the FMed133A form that you were issued on discharge. </p>
+
+      <form class="form" action="/sprint-004/eligibility/referral/full-name" method="post">
+
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="dischargeReason" name="dischargeReason" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="dischargeReason">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="dischargeReason-2" name="dischargeReason" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="dischargeReason-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+        <br><br>
+
+          <h3 class="govuk-heading-s">
+            If you need help using this service contact Defence Business Services
+          </h3>
+          <p>
+            Freephone (UK only): 0808 1914 2 18<br>
+            Telephone (overseas): +44 1253 866 043<br>
+            8.00 am to 5:00 pm Monday to Friday
+        </p>
+          <p>When the helpline is closed, callers will be given the option to be routed to The Samaritans 24hr helpline.</p>
+
+        
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      If you are not a veteran, you may still be able to use this service
+    </h1>
+
+    <p>If you are a family member of a veteran you may be eligible for some  services yourself.</p>
+    <p>If you are applying on behalf of a veteran you can use this service on their behalf to refer them.</p>
+    <p>In both cases you will need access to this  information about the veteran:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>year of discharge</li>
+      <li>whether they were medically discharged</li>
+      <li>service number </li>
+      <li>name and date of birth</li>
+      <li>an email address to contact you or them about the referral</li>
+    </ul>
+
+    <form class="form" action="/sprint-004/eligibility/referral/discharge-year" method="post">
+     
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+    <h3 class="govuk-heading-s">
+      If you need help using this service contact Defence Business Services
+    </h3>
+    <p>
+      Freephone (UK only): 0808 1914 2 18<br>
+      Telephone (overseas): +44 1253 866 043<br>
+      8.00 am to 5:00 pm Monday to Friday
+  </p>
+    <p>When the helpline is closed, callers will be given the option to be routed to The Samaritans 24hr helpline.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

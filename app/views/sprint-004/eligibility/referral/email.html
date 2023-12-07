@@ -17,10 +17,10 @@
     <div class="govuk-grid-column-two-thirds">
  
       <h1 class="govuk-heading-l">
-        What year did you leave service?
+        What email address should we use to contact you?
       </h1>
 
-      <form class="form" action="/sprint-004/eligibility/referral/medical-discharge" method="post">
+      <form class="form" action="/sprint-004/eligibility/referral/check-answers" method="post">
 
         <!-- <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
@@ -43,15 +43,11 @@
             <!-- <div id="passport-issued-hint" class="govuk-hint">
               What date did you leave the armed forces? If you are still in active service enter the year you expect to be discharged.
             </div> -->
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="discharge-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="discharge-year" name="discharge-year" type="text" inputmode="numeric">
-                </div>
-              </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="event-name">
+                Enter an email address
+              </label>
+              <input class="govuk-input" id="event-name" name="eventName" type="text">
             </div>
 
           </fieldset>

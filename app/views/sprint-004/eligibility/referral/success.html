@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Your request has been sent to Op Courage
+      </h1>
+      <div class="govuk-panel__body">
+        Your reference number<br><strong>HDJ2123F</strong>
+      </div>
+    </div>
+
+
+    <h2 class="govuk-heading-m">
+      What happens next
+    </h2>
+
+    <p>We've sent your request to Op Courage.</p>
+
+    <p>They will contact you within 5 working days.</p>
+
+    <p>An email confimation has been sent to <a href="#">joe.bloggs11@gmail.com</a></p>
+
+    <h3 class="govuk-heading-s">
+      If you need further support contact Defence Business Services
+    </h3>
+    <p>
+      Freephone (UK only): 0808 1914 2 18<br>
+      Telephone (overseas): +44 1253 866 043<br>
+      8.00 am to 5:00 pm Monday to Friday
+  </p>
+    <p>When the helpline is closed, callers will be given the option to be routed to The Samaritans 24hr helpline.</p>
+
+
+    <p>
+      <a href="#">
+        What did you think of this service?
+      </a> (takes 30 seconds)
+    </p>
+
+
+  </div>
+</div>
+
+{% endblock %}

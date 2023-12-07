@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+ 
+      <h1 class="govuk-heading-l">
+        What is your service number?
+      </h1>
+
+      <p>If you’ve had more than one period of service, tell us the service number for your last period of service.</p>
+
+      <form class="form" action="/sprint-004/eligibility/referral/date-of-birth" method="post">     
+
+        <div class="govuk-form-group">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">
+              Service number
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+          </div>
+
+
+        </div>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
