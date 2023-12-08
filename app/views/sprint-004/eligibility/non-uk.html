@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      This service is for veterans who are  looking for UK-based support
+    </h1>
+
+    <p>If you want request a referral to a government-run service the veteran you are referring must be based in the UK.</p>
+    <p>You can still use the signposting tool to search for information, including charities that may offer help to veterans based overseas.</p>
+    <p>For further information visit <a href="https://www.britishlegion.org.uk/get-involved/things-to-do/membership/branches/overseas-branches"> Royal British Legion</a> or contact your local embassy.</p>
+
+
+    <form class="form" action="/sprint-004/eligibility/referral/discharge-year" method="post">
+     
+      <!-- {{ govukButton({
+      text: "Continue"
+      }) }} -->
+
+   
+
+  </div>
+</div>
+
+{% endblock %}

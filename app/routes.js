@@ -75,3 +75,35 @@ router.post('/sprint-003/does-consent-to-refer', function(request, response) {
         response.redirect("/sprint-003/full-name")
     }
 })
+
+// Sprint 004
+
+router.post('/sprint-004/country', function(request, response) {
+    var country = request.session.data['country']
+
+    if (country == "england") {
+        response.redirect("/sprint-004/eligibility/when-did-you-leave")
+    } else if (country == "scotland") {
+        response.redirect("/sprint-004/eligibility/when-did-you-leave")
+    } else if (country == "wales") {
+        response.redirect("/sprint-004/eligibility/when-did-you-leave")
+    } else if (country == "ni") {
+        response.redirect("/sprint-004/eligibility/when-did-you-leave")
+    } else if (country == "none") {
+        response.redirect("/sprint-004/eligibility/non-uk")
+    }
+})
+
+router.post('/sprint-004/whatBestDescribesYou', function(request, response) {
+    var whatBestDescribesYou = request.session.data['whatBestDescribesYou']
+
+    if (whatBestDescribesYou == "yes") {
+        response.redirect("/sprint-004/eligibility/referral/discharge-year")
+    } else if (whatBestDescribesYou == "no") {
+        response.redirect("/sprint-004/eligibility/referral/non-veteran")
+    } else if (whatBestDescribesYou == "serving") {
+        response.redirect("/sprint-004/eligibility/referral/active-service")
+    } else if (whatBestDescribesYou == "onBehalf") {
+        response.redirect("/sprint-004/eligibility/referral/non-veteran")
+    }
+})

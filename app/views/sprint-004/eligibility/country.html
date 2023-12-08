@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      What location do you need information about?
+    </h1>
+
+    <!-- <form class="form" action="/sprint-004/eligibility/when-did-you-leave" method="post"> -->
+      <form class="form" action="/sprint-004/country" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country" name="country" type="radio"
+                value="england">
+              <label class="govuk-label govuk-radios__label" for="country">
+                England
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-2" name="country" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-3" name="country" type="radio"
+                value="wales">
+              <label class="govuk-label govuk-radios__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-4" name="country" type="radio"
+                value="ni">
+              <label class="govuk-label govuk-radios__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="country-5" name="country" type="radio"
+                value="none">
+              <label class="govuk-label govuk-radios__label" for="country-5">
+                None of the above
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
