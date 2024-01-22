@@ -1,0 +1,669 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Search results {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .card {
+    background: #f3f2f1;
+    padding: 15px;
+    border: 1px solid #b1b4b6;
+    margin-bottom: 40px;
+  }
+  .image-logo {
+    width: 120px;
+    float: right;
+    display: inline;
+    overflow: clip;
+  }
+</style>
+
+{% include "emergency-banner.html" %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Find support for veterans and their families
+    </h1>
+
+    <p>Use this signposting tool to find the most relevant information about services for veterans of the armed forces
+      in the UK.
+    </p>
+    <p>You can filter results by your location in the UK and the support services you need information about.</p>
+    <p>Information is divided into:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        Government services e.g. Ministry of Defence, the Department for Work and Pensions, NHS and other government
+        funded initiatives.
+      </li>
+      <li>
+        Charities and other non-governmental organisations that have asked to be listed on GOV.UK as providers of
+        specialist support to the veteran community.
+      </li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      Defence Business Services provides welfare support for veterans who left service in the last two years. If you
+      request a referral to them, we will check which year you left service to ensure you are eligible.
+    </div>
+
+    <h2 class="govuk-heading-m">
+      If you need help with many different things
+    </h2>
+
+    <p>Content here about what to do if you have multiple/complex needs?</p>
+
+    <form class="form" action="/sprint-005/signposting/search-results-v4" method="post">
+
+
+    {{ govukButton({
+      text: "Continue"
+      }) }}
+      </form>
+
+  </div>
+
+  
+</div>
+
+<br>
+
+<div id="passport-issued-hint" class="govuk-hint">
+  <a href="#">(clear filters)</a>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+
+    <div class="card">
+
+      <h2 class="govuk-heading-m">
+        Filter results
+      </h2>
+
+      <h3 class="govuk-heading-s">
+        By location
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h3 class="govuk-heading-s">
+        By topic
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" data-aria-controls="conditional-finance">
+              <label class="govuk-label govuk-checkboxes__label" for="topic">
+                Finance and benefits
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-finance">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" data-aria-controls="conditional-finance">
+                <label class="govuk-label govuk-checkboxes__label" for="topic">
+                  Sub category 1
+                </label>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-2">
+                Physical health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-4" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-4">
+                Employment and training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-5">
+                Housing 
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-6" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-6">
+                Family and children
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-7" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-7">
+                Community and volunteering
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <h3 class="govuk-heading-s">
+        By branch
+      </h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                Army
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Navy
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Royal Air Force
+              </label>
+            </div>
+            <!-- <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div> -->
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Apply filters",
+      href: "#"
+      }) }}
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <!-- Sort -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort" style="float: left; padding: 7px 10px 7px 0px;">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="az" selected>A - Z</option>
+        <option value="za">Z - A</option>
+      </select>
+    </div>
+
+    <hr>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="https://assets.rit.org.uk/small-charity/clients/amicustrust/assets/logo.svg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Amicus Trust</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/armybenfund.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Army Benevolent Fund</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Finance
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/afbc.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Breakfast Club Network</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Families and Communities
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/buildforce.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Buildforce</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="https://combatstress.org.uk/sites/all/themes/combat_stress/img/skin/logo/svg_logo--vertical.svg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Combat Stress</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Ex Forces Courses</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="https://www.haighousing.org.uk/wp-content/uploads/2021/11/haig-logo.svg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Haig Housing</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="https://nivso.org.uk/img/logos/logo-full.svg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Northern Ireland Veterans Support Office</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment, financial support, physical health, housing, family and relationship, mental health, community groups
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Northern Ireland
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/opcourage.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Op Courage</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+            England
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/opfortitude.jpeg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Op Fortitude</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <!-- <img src="/public/images/org-logos/.png" class="image-logo" alt="A image of a placeholder charity logo"> -->
+        <h2 class="govuk-heading-m"><a href="#">Outside the Wire</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/rafff.jpeg" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">RAF Families Federation</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment, financial support, physical health, housing, family and relationship, mental health, community groups
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/theripplepond.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">The Ripple Pond</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Families and Communities
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/salutemyjob.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Salute My Job</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/vetrail.png" class="image-logo" alt="A image of a placeholder charity logo">
+        <h2 class="govuk-heading-m"><a href="#">Veterans Railcard</a></h2>
+      </div>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Finances
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Region
+          </dt>
+          <dd class="govuk-summary-list__value">
+          UK wide
+          </dd>
+        </div>
+      </dl>
+      <br>
+    </div>
+
+    <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Did you leave the armed forces in the past two years? – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Did you leave the armed forces in the past two years? 
+    </h1>
+
+    <p>We are asking this so we can show you the most relevant results.</p>
+
+    <form class="form" action="/sprint-005/signposting/search-results-v4-default" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="timeOfLeaving" name="timeOfLeaving" type="radio"
+                value="Yes">
+              <label class="govuk-label govuk-radios__label" for="timeOfLeaving">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="timeOfLeaving-2" name="timeOfLeaving" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="doYouConsentToRefer-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      {{ govukButton({
+      text: "Continue"
+      }) }}
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

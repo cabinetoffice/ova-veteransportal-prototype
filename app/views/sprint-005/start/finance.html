@@ -1,0 +1,254 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Start page
+{% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for this page -->
+{{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukBreadcrumbs({
+items: [
+{
+text: "Home",
+href: "#"
+},
+{
+text: "Section",
+href: "#"
+},
+{
+text: "Subsection"
+}
+]
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-hint">
+      Guidance
+    </h1>
+    <h1 class="govuk-heading-xl">
+      Support services for veterans
+    </h1>
+
+    <p>
+      Use this service to search for support for veterans and their families. <br> You can:
+    <ul class="govuk-list govuk-list--bullet">
+      <li>search for different kinds of support</li>
+      <li>request a referral to a government service </li>
+      <li>explore a range of support options from other organisations</li>
+    </ul>
+    </p>
+
+
+    <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+      <nav class="govuk-prototype-kit-common-templates-contents-list" aria-label="Pages in this guide"
+        role="navigation">
+        <h2 class="govuk-prototype-kit-common-templates-contents-list__title">
+          Contents
+        </h2>
+        <ol class="govuk-prototype-kit-common-templates-contents-list__list">
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+            <a href="#">
+              Accommodation and relocation
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Family and children
+            </a>
+          </li>
+          <li aria-current="true"
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="/sprint-003/start/finance">
+              Finance and benefits
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed govuk-prototype-kit-common-templates-contents-list__list-item--active">
+            <a href="#">
+              Physical health
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Mental health, addiction and stress
+            </a>
+          </li>
+          <li
+            class="govuk-prototype-kit-common-templates-contents-list__list-item govuk-prototype-kit-common-templates-contents-list__list-item--dashed">
+            <a href="#">
+              Training, education and employment
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </aside>
+
+  </div>
+  <div class="govuk-warning-text govuk-grid-column-one-third">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      If you need immediate help go to
+      <a class="govuk-notification-banner__link" href="https://www.gov.uk/guidance/urgent-help-for-veterans"> urgent
+        help for veterans</a>
+    </strong>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds govuk-prototype-kit-common-templates-mainstream-guide-body">
+
+    <aside class="govuk-prototype-kit-common-templates-mainstream-guide-contents-list" role="complementary">
+      <h2 class="govuk-heading-m">
+        Finance and benefits
+      </h2>
+      <div>
+        <ol class="govuk-list">
+          <li>
+            <a href="https://www.gov.uk/government/organisations/veterans-uk">Veterans UK</a>
+            <p>Supports applications for compensation, pensions and welfare support for veterans and their families.</p>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/guidance/veterans-welfare-service">Veterans Welfare Service</a>
+            <p>Provides general help and advice to veterans or anyone supporting a veteran, their families and
+              dependants.</p>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/guidance/help-and-support-for-service-leavers-and-their-families">Defence
+              Transition Service</a>
+            <p>Information and support for service leavers and their families as they leave the armed forces and adjust to civilian life.</p>
+          </li>
+          <li>
+            <a
+              href="https://www.gov.uk/government/publications/jobcentre-plus-services-for-the-armed-forces-and-their-families/armed-forces-enhanced-access-to-jobcentre-plus-services-and-armed-forces-champions#dwp-and-the-armed-forces-covenant">Department
+              of Work and Pensions</a>
+            <p>DWP and the Armed Forces Covenant</p>
+          </li>
+          <li>
+            <a href="https://ukafvp.mod.gov.uk/">Defence Business Services</a>
+            <p>Ministery of Defence support services for our Armed Forces and Veterans</p>
+          </li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Other organisations that support veterans
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a href="https://www.veterans-railcard.co.uk/">
+              Veterans' Railcard
+            </a>
+          </li>
+          <li>
+            <a href="https://www.defencediscountservice.co.uk/">
+              Defence discount card
+            </a>
+          </li>
+          <li>
+            <a href="https://www.moneyhelper.org.uk/en/money-troubles/dealing-with-debt">
+              Moneyhelper debt advice
+            </a>
+          </li>
+          <li>
+            <a href="https://armybenevolentfund.org/">
+              Army Benevolant Fund
+            </a>
+          </li>
+          <li>
+            <a href="https://www.armedforcesoutreachservice.org/">
+              Armed Forces Outreach Service
+            </a>
+          </li>
+          <li>
+            <a href="https://forcespensionsociety.org/">
+              Forces Pension Society
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Military Credit Union
+            </a>
+          </li>
+          <li>
+            <a href="https://www.veteranscharity.org.uk/">
+              The Veterans Charity
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Request a referral
+    </h1>
+    <p>
+      You can use this service to request a referral to government services:
+    </p>
+
+    <div>
+      <p>Before you start</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>we'll ask you some questions about the kind of support you need</li>
+        <li>we will need some personal information about your location and contact preferences</li>
+        <li>we will ask for your consent to share information with other government services so they understand the kind
+          of support you need access to</li>
+      </ul>
+    </div>
+
+    <div class="govuk-inset-text">
+      This service is also available in <a>Welsh (Cymraeg).</a>
+    </div>
+
+    <a href="/sprint-003/what-describes-you" role="button" draggable="false" class="govuk-button govuk-button--start"
+      data-module="govuk-button">
+      Start now
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+        viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+
+    <h3 class="govuk-heading-s">
+      If you need help using this service
+    </h3>
+    <p>
+      Contact Veterans UK
+      Freephone (UK only): 0808 1914 2 18 Telephone (overseas): +44 1253 866 043 Email: veterans-uk@mod.gov.uk Normal
+      service 8.00 am to 4.00 pm Monday to Friday
+      When the helpline is closed, callers will be given the option to be re-routed to The Samaritans 24 hour helpline.
+    </p>
+
+  </div>
+</div>
+
+
+{% endblock %}
