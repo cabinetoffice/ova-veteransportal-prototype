@@ -21,7 +21,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
   }
 </style>
 
-{% include "emergency-banner.html" %}
+
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -29,42 +29,48 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       Find support for veterans and their families
     </h1>
 
-    <p>Use this signposting tool to find the most relevant information about services for veterans of the armed forces
-      in the UK.
-    </p>
-    <p>You can filter results by your location in the UK and the support services you need information about.</p>
-    <p>Information is divided into:</p>
+    <p>You can use this service to find information about support available to veterans of the UK armed forces and their families.</p>
+    <p>You can filter results by location and select as many areas of support as you require. Results will include information about:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>
-        Government services e.g. Ministry of Defence, the Department for Work and Pensions, NHS and other government
-        funded initiatives.
+        services that are funded by the government 
       </li>
       <li>
-        Charities and other non-governmental organisations that have asked to be listed on GOV.UK as providers of
-        specialist support to the veteran community.
+        charities and other non-government organisations that offer specialist support to veterans and their families
       </li>
     </ul>
 
-    <div class="govuk-inset-text">
-      Defence Business Services provides welfare support for veterans who left service in the last two years. If you
-      request a referral to them, we will check which year you left service to ensure you are eligible.
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        If you need immediate support, go to <a href="https://www.gov.uk/guidance/urgent-help-for-veterans"> urgent help for veterans</a>
+      </strong>
     </div>
 
+    <!-- <div class="govuk-inset-text">
+      Defence Business Services provides welfare support for veterans who left service in the last two years. If you
+      request a referral to them, we will check which year you left service to ensure you are eligible.
+    </div> -->
+
     <h2 class="govuk-heading-m">
-      I need help with a lot of differeent things
+      Help with multiple issues
     </h2>
+    <p>If you have a lot of different issues you may want to talk to a case worker to discuss the best options for you. </p>
+    <p>Listings will highlight the organisations that offer this.</p>
 
-    <p>Content here about what to do if you have multiple/complex needs?</p>
+    <h2 class="govuk-heading-m">
+      Defence Business Services
+    </h2>
+    <p>This government service supports all service personnel and veterans with welfare and pensions and can provide referrals to other services as necessary.</p>
+    <p>There is specialist support for those who have left service within the past two years, or who are are preparing to leave.</p>
+    <p>Go to <a href="#">Defence Business Services</a>.</p>
 
-    <p>Phoneline?</p>
-
-    <form class="form" action="/sprint-005/signposting/search-results-v4" method="post">
-
-
-    {{ govukButton({
-      text: "Continue"
-      }) }}
-      </form>
+    <!-- <form class="form" action="/sprint-005/signposting/search-results-v4" method="post">
+      {{ govukButton({
+        text: "Continue"
+        }) }}
+    </form> -->
 
   </div>
 
@@ -205,7 +211,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SWWest" data-aria-controls="conditional-eng">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SWWest" data-aria-controls="conditional-wales">
                 <label class="govuk-label govuk-checkboxes__label" for="region">
                   South Wales West
                 </label>
@@ -363,6 +369,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="govuk-grid-column-two-thirds">
     <!-- Sort -->
+    <p>showing 1 - 15 of <strong>15</strong> charities and organisations</p>
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort" style="float: left; padding: 7px 10px 7px 0px;">
         Sort by

@@ -60,15 +60,12 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
 
     <form class="form" action="/sprint-005/signposting/search-results-v4" method="post">
 
-
     {{ govukButton({
       text: "Continue"
       }) }}
       </form>
 
   </div>
-
-  
 </div>
 
 <br>
@@ -94,30 +91,159 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="hmrc">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="england" data-aria-controls="conditional-eng">
               <label class="govuk-label govuk-checkboxes__label" for="country">
                 England
               </label>
             </div>
+
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-eng">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="NorthEastYorks" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  North East and Yorkshire
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="NorthWest" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  North West
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="Midlands" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  Midlands
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="EastEng" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  East of England
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="London" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  London
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SouthWest" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South West
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SouthEast" data-aria-controls="conditional-eng">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South East
+                </label>
+              </div>
+            </div>
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox"
-                value="employment-tribunal">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" data-aria-controls="conditional-scot" value="scotland">
               <label class="govuk-label govuk-checkboxes__label" for="country-2">
                 Scotland
               </label>
             </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-scot">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SouthernUplands" data-aria-controls="conditional-scot">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  The Southern Uplands
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="CentralLowlands" data-aria-controls="conditional-scot">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  The Central Lowlands
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="Highlands" data-aria-controls="conditional-scot">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  The Highlands
+                </label>
+              </div>
+            </div>
+
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="MOD">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="wales" data-aria-controls="conditional-wales">
               <label class="govuk-label govuk-checkboxes__label" for="country-3">
                 Wales
               </label>
             </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-wales">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="MidAndWest" data-aria-controls="conditional-wales">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  Mid and West Wales
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="NorthWales" data-aria-controls="conditional-wales">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  North Wales
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SWCentral" data-aria-controls="conditional-wales">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South Wales Central
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SWEast" data-aria-controls="conditional-wales">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South Wales East
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SWWest" data-aria-controls="conditional-wales">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South Wales West
+                </label>
+              </div>
+            </div>
+
+
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="DfT">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="NI" data-aria-controls="conditional-ni">
               <label class="govuk-label govuk-checkboxes__label" for="country-4">
                 Northern Ireland
               </label>
             </div>
+
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-ni">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="NorthNI" data-aria-controls="conditional-ni">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  North (Coleraine Area)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="SouthNI" data-aria-controls="conditional-ni">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  South (Portadown Area)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="EastNI" data-aria-controls="conditional-ni">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  East (Holywood Area)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="region" name="region" type="checkbox" value="WestNI" data-aria-controls="conditional-ni">
+                <label class="govuk-label govuk-checkboxes__label" for="region">
+                  West (Enniskillen Area)
+                </label>
+              </div>
+            </div>
+
           </div>
         </fieldset>
       </div>
@@ -136,14 +262,14 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
 
-            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-finance">
+            <!-- <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-finance">
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" data-aria-controls="conditional-finance">
                 <label class="govuk-label govuk-checkboxes__label" for="topic">
                   Sub category 1
                 </label>
               </div>
-            </div>
+            </div> -->
 
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox"
@@ -238,7 +364,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
     <!-- Most relavant results for multiple choice  -->
     <div class="govuk-form-group">
       <div class="card" style="padding-bottom: 50px;">
-        <p>You told us that you're looking for help with [topic], [topic] and [topic] . These organisations can help with all of your needs.</p>
+        <p>You told us that you're looking for help with finance and benefits, mental health and housing. These organisations may be able to help with all of your needs.</p>
 
         <div class="search-results-logo">
           <img src="https://aff.org.uk/wp-content/themes/aff/dist/images/logo-aff.svg" class="image-logo" alt="An image of the Army Families Federation logo">
@@ -249,8 +375,6 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
           <img src="https://functions.rblcdn.co.uk/sitefinity/images/default-source/logos/the-royal-british-legion-logo.svg" class="image-logo" alt="An image of the Royal British Legion logo">
           <h2 class="govuk-heading-m"><a href="#">Royal British Legion</a></h2>
         </div>
-
-
       </div>
     </div>
 
