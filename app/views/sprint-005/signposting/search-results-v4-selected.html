@@ -72,7 +72,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
 <br>
 
 <div id="passport-issued-hint" class="govuk-hint">
-  <a href="#">(clear filters)</a>
+  <a href="/sprint-005/signposting/search-results-v4-default">(clear filters)</a>
 </div>
 
 <div class="govuk-grid-row">
@@ -128,7 +128,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         <fieldset class="govuk-fieldset">
           <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" data-aria-controls="conditional-finance">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" data-aria-controls="conditional-finance" checked="checked">
               <label class="govuk-label govuk-checkboxes__label" for="topic">
                 Finance and benefits
               </label>
@@ -151,7 +151,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD" checked="checked">
               <label class="govuk-label govuk-checkboxes__label" for="topic-3">
                 Mental health
               </label>
@@ -164,7 +164,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
             </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox"
-                value="employment-tribunal">
+                value="employment-tribunal" checked="checked">
               <label class="govuk-label govuk-checkboxes__label" for="topic-5">
                 Housing 
               </label>
@@ -221,17 +221,39 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </fieldset>
       </div>
 
-      
-
       {{ govukButton({
       text: "Apply filters",
-      href: "/sprint-005/signposting/search-results-v4-selected"
+      href: "#"
       }) }}
 
     </div>
   </div>
 
+<!-- </div> -->
+
   <div class="govuk-grid-column-two-thirds">
+
+    <!-- Most relavant results for multiple choice  -->
+    <div class="govuk-form-group">
+      <div class="card" style="padding-bottom: 50px;">
+        <p>You told us that you're looking for help with [topic], [topic] and [topic] . These organisations can help with all of your needs.</p>
+
+        <div class="search-results-logo">
+          <img src="https://aff.org.uk/wp-content/themes/aff/dist/images/logo-aff.svg" class="image-logo" alt="An image of the Army Families Federation logo">
+          <h2 class="govuk-heading-m"><a href="#">Army Families Federation</a></h2>
+        </div>
+        <hr>
+        <div class="search-results-logo">
+          <img src="https://functions.rblcdn.co.uk/sitefinity/images/default-source/logos/the-royal-british-legion-logo.svg" class="image-logo" alt="An image of the Royal British Legion logo">
+          <h2 class="govuk-heading-m"><a href="#">Royal British Legion</a></h2>
+        </div>
+
+
+      </div>
+    </div>
+
+    <p>These organisations can help with some of your needs.</p>
+
     <!-- Sort -->
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort" style="float: left; padding: 7px 10px 7px 0px;">
@@ -297,7 +319,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       <br>
     </div>
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
         <img src="/public/images/org-logos/afbc.png" class="image-logo" alt="An image of the Breakfast Club Network logo">
         <h2 class="govuk-heading-m"><a href="#">Breakfast Club Network</a></h2>
@@ -321,9 +343,9 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
         <img src="/public/images/org-logos/buildforce.png" class="image-logo" alt="An image of the Buildforce logo">
         <h2 class="govuk-heading-m"><a href="#">Buildforce</a></h2>
@@ -347,7 +369,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
     <div class="result">
       <div class="search-results-logo">
@@ -375,9 +397,9 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       <br>
     </div>
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
-        <!-- <img src="/public/images/org-logos/.png" class="image-logo" alt="An image of the  logo"> -->
+        <img src="/public/images/org-logos/.png" class="image-logo" alt="An image of the  logo">
         <h2 class="govuk-heading-m"><a href="#">Ex Forces Courses</a></h2>
       </div>
       <dl class="govuk-summary-list">
@@ -399,9 +421,9 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
         <img src="https://www.haighousing.org.uk/wp-content/uploads/2021/11/haig-logo.svg" class="image-logo" alt="An image of the Haig Housing logo">
         <h2 class="govuk-heading-m"><a href="#">Haig Housing</a></h2>
@@ -425,7 +447,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
     <div class="result">
       <div class="search-results-logo">
@@ -557,7 +579,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       <br>
     </div>
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
         <img src="/public/images/org-logos/theripplepond.png" class="image-logo" alt="An image of the The Ripple Pond logo">
         <h2 class="govuk-heading-m"><a href="#">The Ripple Pond</a></h2>
@@ -581,9 +603,9 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
-    <div class="result">
+    <!-- <div class="result">
       <div class="search-results-logo">
         <img src="/public/images/org-logos/salutemyjob.png" class="image-logo" alt="An image of the Salute My Job logo">
         <h2 class="govuk-heading-m"><a href="#">Salute My Job</a></h2>
@@ -607,7 +629,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
       <br>
-    </div>
+    </div> -->
 
     <div class="result">
       <div class="search-results-logo">
