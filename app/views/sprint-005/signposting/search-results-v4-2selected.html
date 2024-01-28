@@ -346,7 +346,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="MOD" checked="checked">
               <label class="govuk-label govuk-checkboxes__label" for="topic-3">
                 Mental health
               </label>
@@ -358,8 +358,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox"
-                value="employment-tribunal">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox" value="employment-tribunal" checked="checked">
               <label class="govuk-label govuk-checkboxes__label" for="topic-5">
                 Housing 
               </label>
@@ -411,11 +410,11 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       
       {{ govukButton({
       text: "Apply filters",
-      href: "/sprint-005/signposting/search-results-v4-2selected"
+      href: "/sprint-005/signposting/search-results-v4-1selected"
       }) }}
 
       <div id="passport-issued-hint" class="govuk-hint">
-        <a href="#">(clear filters)</a>
+        <a href="/sprint-005/signposting/search-results-v4-default">(clear filters)</a>
       </div>
 
     </div>
@@ -424,7 +423,8 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
   <div class="govuk-grid-column-two-thirds">
     <!-- Sort -->
     <!-- <p>showing 1 - 15 of <strong>15</strong> charities and organisations</p> -->
-    <h2 class="govuk-heading-m">175 services</h2>
+    <h2 class="govuk-heading-m">43 services</h2>
+    <p>Showing results for: Mental health, Housing</p>
     <!-- <div class="govuk-form-group">
       <label class="govuk-label" for="sort" style="float: left; padding: 7px 10px 7px 0px;">
         Sort by
@@ -461,31 +461,7 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
       </strong>
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-      <h2 class="govuk-heading-m"><a href="https://www.forcesemployment.org.uk/programmes/op-nova/">Op Nova</a></h2>
-      <p>
-        Op Nova provides support for veterans who are in contact with the justice system, helping them to access the 
-        services they need, including employment, legal advice and referrals to support with housing and mental health.
-      </p>
-      <strong class="govuk-tag govuk-tag--grey">
-        Employment and training
-      </strong>
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-      <h2 class="govuk-heading-m"><a href="#">Op Restore</a></h2>
-      <p>
-        Op Restore supports veterans with service attributable physical health conditions, regardless of how long they served for and when they left the Armed Forces. 
-      </p>
-      <p><strong>Op Restore must be accessed via GP referral.</strong></p>
-      <p>
-        The NHS website has this <a href="https://www.nhs.uk/nhs-services/armed-forces-community/service-leavers-guide/#:~:text=It%20is%20recommended%20that%20you,specific%20issues%20and%20health%20services.">
-           step by step guide to registering with a GP </a> for veterans.
-      </p>
       
-      <strong class="govuk-tag govuk-tag--grey">
-        Physical Health
-      </strong>
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
     </div>
 
     <br>
@@ -493,149 +469,6 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
     <!-- <br>  -->
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-    <div class="result">
-      <div class="search-results-logo">
-        <img src="/public/images/org-logos/armybenfund.png" class="image-logo" alt="An image of the Army Benevolent Fund logo">
-        <h2 class="govuk-heading-m"><a href="https://armybenevolentfund.org/need-our-help/individual-grants/">Army Benevolent Fund</a></h2>
-      </div>
-      <p>
-        Offers grants to individuals in need of help with a range of issues, including debt, funeral costs, household expenses, elderly care and mobility.
-      </p>
-      <p>
-        <strong>Does not accept direct applications.</strong>
-      </p>
-      <p>
-        Applications must be submitted through the Soldier’s Unit Welfare Officer or the Veteran’s Regimental or Corp Association.
-      </p>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Finance
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="govuk-summary-list__value">
-            UK wide
-          </dd>
-        </div>
-      </dl>
-      <strong class="govuk-tag govuk-tag--grey">
-        Finance and benefits
-      </strong>
-      <br>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-    <div class="result">
-      <div class="search-results-logo">
-        <img src="/public/images/org-logos/asdic.png" class="image-logo" alt="An image of the Association of Service Drop in Centres (ASDIC) logo">
-        <h2 class="govuk-heading-m"><a href="https://www.asdic.org.uk/">Association of Service Drop in Centres (ASDIC)</a></h2>
-      </div>
-      <p>
-        ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.
-      </p>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Community and volunteering
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="govuk-summary-list__value">
-            UK wide
-          </dd>
-        </div>
-      </dl>
-      <strong class="govuk-tag govuk-tag--grey">
-        Community and volunteering
-      </strong>
-      <br>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-    <div class="result">
-      <div class="search-results-logo">
-        <img src="https://blesma.org/Assets/images/Blesma_full_logo.svg" class="image-logo" alt="An image of the Blesma: The Limbless Veterans Charity logo">
-        <h2 class="govuk-heading-m"><a href="https://blesma.org/">Blesma: The Limbless Veterans Charity</a></h2>
-      </div>
-      <p>
-        A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.
-      </p>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Physical health, finance and benefits
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="govuk-summary-list__value">
-            UK wide
-          </dd>
-        </div>
-      </dl>
-      <strong class="govuk-tag govuk-tag--grey">
-        Physical health
-      </strong>
-      <br>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-    <div class="result">
-      <div class="search-results-logo">
-        <img src="/public/images/org-logos/blindvets.jpeg" class="image-logo" alt="An image of the Blind Veterans UK logo">
-        <h2 class="govuk-heading-m"><a href="https://www.blindveterans.org.uk/?msclkid=edb7d45bbf0410926a7bb1eec06d6c9b&utm_source=bing&utm_medium=cpc&utm_campaign=Bing_Paid_Branded&utm_term=blind%20veterans&utm_content=Blind%20Veterans%20Charity">Blind Veterans UK</a></h2>
-      </div>
-      <p>
-        Provides rehabilitation, training, practical advice and emotional support to veterans regardless of how or when they lost their sight.
-      </p>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Physical health, finance and benefits
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="govuk-summary-list__value">
-            UK wide
-          </dd>
-        </div>
-      </dl>
-      <strong class="govuk-tag govuk-tag--grey">
-        Physical health
-      </strong>
-      <br>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
 
     <div class="result">
       <div class="search-results-logo">
@@ -673,41 +506,6 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
 
     <div class="result">
       <div class="search-results-logo">
-        <img src="/public/images/org-logos/building-heroes.png" class="image-logo" alt="An image of the Building Heroes logo">
-        <h2 class="govuk-heading-m"><a href="https://www.buildingheroes.org.uk/">Building Heroes</a></h2>
-      </div>
-      <p>
-        Training and employment support for veterans who want to work in the construction industry.
-      </p>
-      <dl class="govuk-summary-list">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Help with
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Employment and training
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Location
-          </dt>
-          <dd class="govuk-summary-list__value">
-            England and Wales
-          </dd>
-        </div>
-      </dl>
-      <strong class="govuk-tag govuk-tag--grey">
-        Employment and training
-      </strong>
-      <br>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-
-    <div class="result">
-      <div class="search-results-logo">
         <img src="https://combatstress.org.uk/sites/all/themes/combat_stress/img/skin/logo/svg_logo--vertical.svg" class="image-logo" alt="An image of the Combat Stress logo">
         <h2 class="govuk-heading-m"><a href="https://combatstress.org.uk/">Combat Stress</a></h2>
       </div>
@@ -737,10 +535,258 @@ Search results {{ serviceName }} – GOV.UK Prototype Kit
     </div>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/forward_assist.jpeg" class="image-logo" alt="An image of the Forward Assist logo">
+        <h2 class="govuk-heading-m"><a href="https://www.forward-assist.com/">Forward Assist</a></h2>
+      </div>
+      <p>Provides support, advice, guidance and advocacy aimed at improving the mental and physical health of veterans.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UK wide
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Mental health
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="https://www.haighousing.org.uk/wp-content/uploads/2021/11/haig-logo.svg" class="image-logo" alt="An image of the Haig Housing logo">
+        <h2 class="govuk-heading-m"><a href="https://www.haighousing.org.uk/">Haig Housing</a></h2>
+      </div>
+      <p>Provides UK wide housing built for veterans and their families in housing need.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UK wide
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Housing
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/helpforheroes.png" class="image-logo" alt="An image of the Help for Heroes logo">
+        <h2 class="govuk-heading-m"><a href="https://www.helpforheroes.org.uk/">Help for Heroes</a></h2>
+      </div>
+      <p>Supports members of the armed forces community with their physical and mental health and a range of welfare issues.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health, Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UK wide
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Mental health
+      </strong>
+      <strong class="govuk-tag govuk-tag--grey">
+       Housing
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/housingscot.png" class="image-logo" alt="An image of the Housing Options Scotland logo">
+        <h2 class="govuk-heading-m"><a href="https://housingoptionsscotland.org.uk/">Housing Options Scotland</a></h2>
+      </div>
+      <p>Helps disabled people, older adults and members of the Armed Forces community, including veterans, to find a home that suits their needs.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Housing
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Scotland
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Housing
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/links.jpeg" class="image-logo" alt="An image of the Links Combined Forces logo">
+        <h2 class="govuk-heading-m"><a href="https://www.links.uk.net/">Links Combined Forces</a></h2>
+      </div>
+      <p>Provides mental health support for veterans and blue light teams and their families living in Carmarthenshire. </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Wales
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Mental health
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <!-- <img src="/public/images/org-logos/" class="image-logo" alt="An image of the Combat Stress logo"> -->
+        <h2 class="govuk-heading-m"><a href="https://www.matthewproject.org/outsidethewire">Outside the Wire</a></h2>
+      </div>
+      <p>A bespoke drug and alcohol service offering confidential advice and support to current and ex HM Forces personnel and their families, across Norfolk, Suffolk, Essex, and Cambridgeshire.</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            East England
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Mental health
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/phoenix.jpeg" class="image-logo" alt="An image of the Phoenix Heroes logo">
+        <h2 class="govuk-heading-m"><a href="https://www.phoenixheroes.co.uk/">Phoenix Heroes</a></h2>
+      </div>
+      <p>A Community Interest Company based in Colchester, that supports veterans UK wide by providing them with access to outdoor activities and offers support with those struggling with mental health difficulties </p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mental health
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UK wide
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        Mental health
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <!-- <div class="result">
+      <div class="search-results-logo">
+        <img src="/public/images/org-logos/" class="image-logo" alt="An image of the Combat Stress logo">
+        <h2 class="govuk-heading-m"><a href="">CharityName</a></h2>
+      </div>
+      <p>demo</p>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Help with
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            
+          </dd>
+        </div>
+      </dl>
+      <strong class="govuk-tag govuk-tag--grey">
+        
+      </strong>
+      <br>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
 
     
-
-
     <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
       <ul class="govuk-pagination__list">
         <li class="govuk-pagination__item govuk-pagination__item--current">
