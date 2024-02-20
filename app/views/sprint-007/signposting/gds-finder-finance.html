@@ -1,0 +1,441 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Finder {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  /* .card {
+    background: #f3f2f1;
+    padding: 15px;
+    border: 1px solid #b1b4b6;
+    margin-bottom: 40px;
+  } */
+  /* .image-logo {
+    width: 95px;
+    float: right;
+    display: inline;
+    overflow: clip;
+  } */
+  /* .govuk-notification-banner {
+    border-color: black;
+  } */
+  /* .govuk-notification-banner__heading {
+    max-width: none;
+  } */
+  /* .govuk-notification-banner__content p {
+    max-width: none;
+  } */
+  .charity {
+    float: left;
+    padding: 0 30px 0 0;
+  }
+  .search-about {
+    background: #f3f2f1;
+  }
+  .search-about, .search-in {
+    padding: 10px;
+  }
+  .search-about p, .search-in p {
+    margin: 0 20px 0 0;
+    float: left;
+  }
+  .search-tag {
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 0.3125em;
+    background: #f3f2f1;
+
+    padding: 3px;
+    margin: 0 10px 0 0;
+  }
+  .search-tag p { 
+    padding: 0 8px;
+    margin: 0;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Find support for veterans and their families
+    </h1>
+    <p>Use this service to find information about support available to ex members of the UK armed forces and their families.</p>
+    <p>You can filter results by location and select as many areas of support as you need. Results will include information about:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>services that are funded or run by the government</li>
+      <li>charities and other non-government organisations</li>
+    </ul>
+    <div class="govuk-inset-text">
+      UK veterans are defined as anyone who has served for at least one day in HM Armed Forces (Regular or Reserve) or Merchant Mariners who have seen duty on legally defined military operations.
+    </div>
+  </div>
+</div>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    If you are in danger, or at immediate risk, ring 999
+  </strong>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Find more information about government services at <a href="findsupport1">Support for veterans and their families</a>.
+    </p>
+  </div>
+</div>
+
+<br><br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <!-- <div class="card"> -->
+    
+      <details class="govuk-details" open>
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Topic
+          </span>
+        </summary>
+        
+      <!-- <h3 class="govuk-heading-s">
+        Topic
+      </h3> -->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <br>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance" checked="checked">
+              <label class="govuk-label govuk-checkboxes__label" for="topic" >
+                Finance
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox" value="phealth">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-2">
+                Physical health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="mhealth">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-4" name="topic" type="checkbox" value="legal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-4">
+                Legal help
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox" value="employment">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-5">
+                Employment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-6" name="topic" type="checkbox" value="education">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-6">
+                Education and training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-7" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-7">
+                Housing 
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-8" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-8">
+                Family and children
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-9" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-8">
+                Social and community
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </details>
+
+    <hr>
+    <br>
+    
+    <details class="govuk-details" open>
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Location
+        </span>
+      </summary>
+
+      <!-- <h3 class="govuk-heading-s">
+        Location
+      </h3> -->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <br>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="ukwide" data-aria-controls="conditional-eng">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                UK wide
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-1" name="country" type="checkbox" value="england" data-aria-controls="conditional-eng" checked="checked">
+              <label class="govuk-label govuk-checkboxes__label" for="country-1">
+                England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" data-aria-controls="conditional-scot" value="scotland">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="wales" data-aria-controls="conditional-wales">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="NI" data-aria-controls="conditional-ni">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-5" name="country" type="checkbox" value="NI" data-aria-controls="conditional-ni">
+              <label class="govuk-label govuk-checkboxes__label" for="country-5">
+                Accessible anywhere (remote/online only)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      </details>
+
+      <hr>
+      <br>
+      
+      {{ govukButton({
+      text: "Apply filters",
+      href: "/sprint-007/signposting/gds-finder"
+      }) }}
+
+      <div id="passport-issued-hint" class="govuk-hint">
+        <a href="#">(clear filters)</a>
+      </div>
+
+    <!-- </div> -->
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h2 class="govuk-heading-m">6 results</h2>
+
+    <div class="search-terms">
+
+      <div class="search-about">
+        <p><strong>About</strong></p>
+        <div class="search-tag">
+          <p> &#x2715; Finance</p>
+        </div>
+        <!-- <div class="search-tag">
+          <p> &#x2715; Mental health</p>
+        </div> -->
+      </div>
+
+      <div class="search-in">
+        <p><strong>In</strong></p>
+        <div class="search-tag">
+          <p> &#x2715; England</p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <br>
+
+    <p>Sorted by: <strong>A-Z</strong></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://armybenevolentfund.org/need-our-help/individual-grants/">Army Benevolent Fund</a>
+      </h2>
+      <p>
+        Offers grants to individuals in need of help with a range of issues, including debt, funeral costs, household expenses, elderly care and mobility.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.defencediscountservice.co.uk/">Defence Discount</a>
+      </h2>
+      <p>
+        A Ministry of Defence vetted discount card that allows veterans and members of the armed forces community to receive military discounts.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.felixfund.org.uk/">Felix Fund</a>
+      </h2>
+      <p>
+        Helps anyone who has conducted or assisted with Explosive Ordnance Disposal with a wide range of issues, including physical and mental health and accessing grants. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://forcesmoneyplan.org/">Forces Money Plan</a>
+      </h2>
+      <p>
+        Free, confidential advice from accredited financial advisors who have volunteered their time and expertise to support armed forces personnel and veterans with financial advice.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://forcespensionsociety.org/">Forces Pension Society</a>
+      </h2>
+      <p>
+        An independent, not-for-profit organisation that acts as a pension watchdog for the military community. There is an annual membership fee to access their services.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+       <!-- 
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="#">Charity</a>
+      </h2>
+      <p>
+        text
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: 
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+   -->
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="#">Veterans UK</a>
+      </h2>
+      <p>
+        Free support for veterans and their families, including a helpline, Veterans Welfare Service, Defence Transition Services and injury/bereavement compensation scheme payments.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  
+
+
+    
+
+
+
+
+
+
+    
+
+
+    <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

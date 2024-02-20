@@ -1,0 +1,818 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Finder {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  /* .card {
+    background: #f3f2f1;
+    padding: 15px;
+    border: 1px solid #b1b4b6;
+    margin-bottom: 40px;
+  } */
+  .image-logo {
+    width: 95px;
+    float: right;
+    display: inline;
+    overflow: clip;
+  }
+  .govuk-notification-banner {
+    border-color: black;
+  }
+  /* .govuk-notification-banner__heading {
+    max-width: none;
+  } */
+  .govuk-notification-banner__content p {
+    max-width: none;
+  }
+  .charity {
+    float: left;
+    padding: 0 30px 0 0;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Find support for veterans and their families
+    </h1>
+    <p>Use this service to find information about support available to ex members of the UK armed forces and their families.</p>
+    <p>You can filter results by location and select as many areas of support as you need. Results will include information about:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>services that are funded or run by the government</li>
+      <li>charities and other non-government organisations</li>
+    </ul>
+    <div class="govuk-inset-text">
+      UK veterans are defined as anyone who has served for at least one day in HM Armed Forces (Regular or Reserve) or Merchant Mariners who have seen duty on legally defined military operations.
+    </div>
+  </div>
+</div>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    If you are in danger, or at immediate risk, ring 999
+  </strong>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>
+      Find more information about government services at <a href="findsupport1">Support for veterans and their families</a>.
+    </p>
+  </div>
+</div>
+
+<br><br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="card">
+    
+      <details class="govuk-details" open>
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Topic
+          </span>
+        </summary>
+        
+      <!-- <h3 class="govuk-heading-s">
+        Topic
+      </h3> -->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <br>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic" name="topic" type="checkbox" value="finance">
+              <label class="govuk-label govuk-checkboxes__label" for="topic" >
+                Finance
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-2" name="topic" type="checkbox" value="phealth">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-2">
+                Physical health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-3" name="topic" type="checkbox" value="mhealth">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-3">
+                Mental health
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-4" name="topic" type="checkbox" value="legal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-4">
+                Legal help
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-5" name="topic" type="checkbox" value="employment">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-5">
+                Employment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-6" name="topic" type="checkbox" value="education">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-6">
+                Education and training
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-7" name="topic" type="checkbox"
+                value="employment-tribunal">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-7">
+                Housing 
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-8" name="topic" type="checkbox" value="MOD">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-8">
+                Family and children
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="topic-9" name="topic" type="checkbox" value="DfT">
+              <label class="govuk-label govuk-checkboxes__label" for="topic-8">
+                Social and community
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </details>
+
+    <hr>
+    <br>
+    
+    <details class="govuk-details" open>
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Location
+        </span>
+      </summary>
+
+      <!-- <h3 class="govuk-heading-s">
+        Location
+      </h3> -->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <br>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country" name="country" type="checkbox" value="ukwide" data-aria-controls="conditional-eng">
+              <label class="govuk-label govuk-checkboxes__label" for="country">
+                UK wide
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-1" name="country" type="checkbox" value="england" data-aria-controls="conditional-eng">
+              <label class="govuk-label govuk-checkboxes__label" for="country-1">
+                England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-2" name="country" type="checkbox" data-aria-controls="conditional-scot" value="scotland">
+              <label class="govuk-label govuk-checkboxes__label" for="country-2">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-3" name="country" type="checkbox" value="wales" data-aria-controls="conditional-wales">
+              <label class="govuk-label govuk-checkboxes__label" for="country-3">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-4" name="country" type="checkbox" value="NI" data-aria-controls="conditional-ni">
+              <label class="govuk-label govuk-checkboxes__label" for="country-4">
+                Northern Ireland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="country-5" name="country" type="checkbox" value="NI" data-aria-controls="conditional-ni">
+              <label class="govuk-label govuk-checkboxes__label" for="country-5">
+                Accessible anywhere (remote/online only)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      </details>
+
+      <hr>
+      <br>
+      
+      {{ govukButton({
+      text: "Apply filters",
+      href: "/sprint-007/signposting/gds-finder-finance-mh"
+      }) }}
+
+      <div id="passport-issued-hint" class="govuk-hint">
+        <a href="#">(clear filters)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h2 class="govuk-heading-m">31 results</h2>
+    <p>Sorted by: <strong>A-Z</strong></p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.amicustrust.org/">Amicus Trust</a>
+      </h2>
+      <p>
+        Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.  
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: England
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://armybenevolentfund.org/need-our-help/individual-grants/">Army Benevolent Fund</a>
+      </h2>
+      <p>
+        Offers grants to individuals in need of help with a range of issues, including debt, funeral costs, household expenses, elderly care and mobility.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.asdic.org.uk/">Association of Service Drop in Centres (ASDIC)</a>
+      </h2>
+      <p>
+        ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Community and volunteering
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://blesma.org/">Blesma: The Limbless Veterans Charity</a>
+      </h2>
+      <p>
+        A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Physical health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.blindveterans.org.uk/">Blind Veterans UK</a>
+      </h2>
+      <p>
+        Provides rehabilitation, training, practical advice and emotional support to veterans regardless of how or when they lost their sight.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Physical health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.broughtonhouse.com/">Broughton House</a>
+      </h2>
+      <p>
+        A residential and nursing care home for veterans in Salford, Greater Manchester.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: North West England
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.buildingheroes.org.uk/">Building Heroes</a>
+      </h2>
+      <p>
+        Training and employment support for veterans who want to work in the construction industry.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Employment
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: England and Wales
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://combatstress.org.uk/">Combat Stress</a>
+      </h2>
+      <p>
+        Mental health support for veterans and their families ranging from a hotline to assessment, referral and self help.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.defencediscountservice.co.uk/">Defence Discount</a>
+      </h2>
+      <p>
+        A Ministry of Defence vetted discount card that allows veterans and members of the armed forces community to receive military discounts.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://defencegardens.org/">Defence Gardens</a>
+      </h2>
+      <p>
+        A national network of gardens which host the delivery and evaluation of nature-based therapy for Armed Forces Service Leavers and Veterans and their families.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.felixfund.org.uk/">Felix Fund</a>
+      </h2>
+      <p>
+        Helps anyone who has conducted or assisted with Explosive Ordnance Disposal with a wide range of issues, including physical and mental health and accessing grants. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://forcesmoneyplan.org/">Forces Money Plan</a>
+      </h2>
+      <p>
+        Free, confidential advice from accredited financial advisors who have volunteered their time and expertise to support armed forces personnel and veterans with financial advice.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://forcespensionsociety.org/">Forces Pension Society</a>
+      </h2>
+      <p>
+        An independent, not-for-profit organisation that acts as a pension watchdog for the military community. There is an annual membership fee to access their services.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.forward-assist.com/">Forward Assist</a>
+      </h2>
+      <p>
+        Forward Assist provides support, advice, guidance and advocacy aimed at improving the mental and physical health of veterans.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.haighousing.org.uk/">Haig Housing</a>
+      </h2>
+      <p>
+        Haig Housing provides UK wide housing built for veterans and their families in housing need.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.helpforheroes.org.uk/">Help for Heroes</a>
+      </h2>
+      <p>
+        Help for Heroes supports members of the armed forces community with their physical and mental health and a range of welfare issues.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://housingoptionsscotland.org.uk/">Housing Options Scotland</a>
+      </h2>
+      <p>
+        Housing Options Scotland helps disabled people, older adults and members of the Armed Forces community, including veterans, to find a home that suits their needs.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: Scotland
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.links.uk.net/">Links Combined Forces</a>
+      </h2>
+      <p>
+        Links Combined Forces provides mental health support for veterans and blue light teams and their families living in Carmarthenshire. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: Wales
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/">Op Courage</a>
+      </h2>
+      <p>
+        A specialist mental health service designed to help veterans, their families and serving personnel preparing to leave the armed forces. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: England
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.riverside.org.uk/care-and-support/veterans/opfortitude/">Op Fortitude</a>
+      </h2>
+      <p>
+        Op Fortitude is centralised referral pathway into veteran supported housing. Referrals can be made by veterans themselves as well as any organisations supporting them.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="#">Op Nova</a>
+      </h2>
+      <p>
+        Op Nova provides support for veterans who are in contact with the justice system, helping them to access the services they need, including employment, legal advice and referrals to support with housing and mental health.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Employment
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.nhs.uk/nhs-services/armed-forces-community/veterans-service-leavers-non-mobilised-reservists/">Op Restore</a>
+      </h2>
+      <p>
+        Op Restore supports veterans with service attributable physical health conditions, regardless of how long they served for and when they left the Armed Forces. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Physical health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: England
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.matthewproject.org/outsidethewire">Outside the Wire</a>
+      </h2>
+      <p>
+        A bespoke drug and alcohol service offering confidential advice and support to current and ex HM Forces personnel and their families, across Norfolk, Suffolk, Essex, and Cambridgeshire.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: East England
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.phoenixheroes.co.uk/">Phoenix Heroes</a>
+      </h2>
+      <p>
+        A Community Interest Company based in Colchester, that supports veterans UK wide by providing them with access to outdoor activities and offers support with those struggling with mental health difficulties 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://ptsdresolution.org/">PTSD Resolution</a>
+      </h2>
+      <p>
+        Helps veterans and their families who are struggling with mental health. The programme is community-based, with treatment and support provided locally through a nationwide network of 200 therapists, accredited by the Professional Standards Authority. 
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://rafa.org.uk/">RAFA (Royal Air Force Association)</a>
+      </h2>
+      <p>
+        Helps members and ex-members of the RAF, as well as their spouses, widows and dependants with a range of issues, including mental health support.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.britishlegion.org.uk/">RBL (Royal British Legion)</a>
+      </h2>
+      <p>
+        Helps serving members of the armed forces and veterans and their families with a range of issues, including mental health support via a helpline, or online chat or in locations across the UK.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://www.stoll.org.uk/">Stoll</a>
+      </h2>
+      <p>
+        Provides support and access to social housing for veterans.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://veteranslaunchpad.org.uk/">Veterans Launchpad</a>
+      </h2>
+      <p>
+        Veterans Launchpad Provides accommodation and support to help veterans make a successful transition from military to civilian life.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Housing
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+       <!-- 
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="#">Charity</a>
+      </h2>
+      <p>
+        text
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: 
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+   -->
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="#">Veterans UK</a>
+      </h2>
+      <p>
+        Free support for veterans and their families, including a helpline, Veterans Welfare Service, Defence Transition Services and injury/bereavement compensation scheme payments.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Finance
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="result">
+      <h2 class="govuk-heading-m">
+        <a href="https://walkingwiththewounded.org.uk/">Walking with the Wounded</a>
+      </h2>
+      <p>
+        Walking with the Wounded supports veterans and their families with mental health, employment and care coordination following discharge from service.
+      </p>
+      <div id="charity-hint" class="govuk-hint charity">
+        Help with: Mental health
+      </div>
+      <div id="charity-hint" class="govuk-hint">
+        Location: UK wide
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  
+
+
+    
+
+
+
+
+
+
+    
+
+
+    <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next<span class="govuk-visually-hidden"> page</span></span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg></a>
+      </div>
+    </nav>
+
+
+    </div>
+</div>
+
+
+{% endblock %}

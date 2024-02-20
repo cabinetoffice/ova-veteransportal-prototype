@@ -8,3 +8,6 @@ const addFilter = govukPrototypeKit.views.addFilter
 
 // Add your filters here
 
+addFilter('bold', function (content) {
+    return '<strong>' + content + '</strong>'
+  }, { renderAsHtml: true })
