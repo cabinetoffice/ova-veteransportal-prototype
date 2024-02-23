@@ -1,0 +1,131 @@
+{% macro result(link, name, description, helpsWith, location) %}
+  <div class="result">
+    <h2 class="govuk-heading-m">
+      <a href="{{link}}">{{name}}</a>
+    </h2>
+    <p>
+      {{description}}
+    </p>
+    <div id="charity-hint" class="govuk-hint charity">
+        Help with: {{helpsWith}}
+    </div>
+    <div id="charity-hint" class="govuk-hint">
+        Location: {{location}}
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+{% endmacro %}
+
+{%block content%}
+
+  <h2 class="govuk-heading-m">31 results</h2>
+  <p>Sorted by: <strong>A-Z</strong>
+  </p>
+
+  <div class="search-terms">
+
+    <div class="search-about">
+      <p>
+        <strong>About</strong>
+      </p>
+      <div class="search-tag">
+        <p> &#x2715; Finance</p>
+      </div>
+    </div>
+
+    <div class="search-in">
+      <p>
+        <strong>In</strong>
+      </p>
+      <div class="search-tag">
+        <p> &#x2715; England</p>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+  {% set filters = [
+    'Finance',
+    'Physical health',
+    'Mental Health',
+    'Legal help',
+    'Employment',
+    'Education and Training',
+    'Housing',
+    'Family and Children',
+    'Social and Community'
+  ]
+ %}
+
+  {% set results = [
+  {
+      link: "https://www.asdic.org.uk/",
+      name: "Association of Service Drop in Centres (ASDIC)",
+      description: "ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.",
+      helpsWith: "Social and Community",
+      location: "UK wide"
+  },
+  {
+      link: "https://blesma.org/",
+      name: "Blesma: The Limbless Veterans Charity",
+      description: "A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.",
+      helpsWith: "Social and Community",
+      location: "UK wide"
+  },
+  {
+      link: "https://www.blindveterans.org.uk/",
+      name: "Blind Veterans Uk",
+      description: "Provides rehabilitation, training, practical advice and emotional support to veterans regardless of how or when they lost their sight.",
+      helpsWith: "Physical health",
+      location: "UK wide"
+  },
+  {
+      link: "https://www.broughtonhouse.com/",
+      name: "Broughton House",
+      description: "A residential and nursing care home for veterans in Salford, Greater Manchester.",
+      helpsWith: "Housing",
+      location: "North West England"
+  },
+  {
+      link: "https://www.buildingheroes.org.uk/",
+      name: "Building Heroes",
+      description: "Training and employment support for veterans who want to work in the construction industry.",
+      helpsWith: "Employment",
+      location: "Wales"
+  }
+  ]
+  %}
+
+  {# create another set for the topics and locations the check the data matches with that list #}
+  {% for r in results %}
+    {% if r.helpsWith == data['finance'] 
+      or r.helpsWith == data['phealth'] 
+      or r.helpsWith == data['mhealth'] 
+      or r.helpsWith == data['legal'] 
+      or r.helpsWith == data['employment'] 
+      or r.helpsWith == data['education'] 
+      or r.helpsWith == data['housing'] 
+      or r.helpsWith == data['family'] 
+      or r.helpsWith == data['social']
+      %}
+      <div class="result">
+        <h2 class="govuk-heading-m">
+          <a href="{{r.link}}">{{r.name}}</a>
+        </h2>
+        <p>
+          {{r.description}}
+        </p>
+        <div id="charity-hint" class="govuk-hint charity">
+        Help with: {{r.helpsWith}}
+        </div>
+        <div id="charity-hint" class="govuk-hint">
+        Location: {{r.location}}
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}

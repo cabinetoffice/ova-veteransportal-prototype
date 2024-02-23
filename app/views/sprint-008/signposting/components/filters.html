@@ -1,0 +1,141 @@
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block content %}
+  <div class="card">
+    <form class="govuk-fieldset" action="/sprint-008/signposting/finder" method="post">
+      <details class="govuk-details" open>
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+                Topic
+              </span>
+        </summary>
+        {{ govukCheckboxes({
+                  name: "topic",
+                  classes: "govuk-checkboxes--small",
+                  items: [
+                    {
+                      name: 'finance',
+                      value: "Finance",
+                      checked: data['finance'],
+                      text: "Finance"
+                    },
+                    {
+                      name: "phealth",
+                      value: "Physical health",
+                      checked: data['phealth'],
+                      text: "Physical health"
+                    },
+                    {
+                      name: "mhealth",
+                      value: "Mental Health",
+                      checked: data['mhealth'],
+                      text: "Mental Health"
+                    },
+                    {
+                      name: "legal",
+                      value: "Legal help",
+                      checked: data['legal'],
+                      text: "Legal help"
+                    },
+                    {
+                      name: "employment",
+                      value: "Employment",
+                      checked: data['employment'],
+                      text: "Employment"
+                    },
+                    {
+                      name: "education",
+                      value: "Education and Training",
+                      checked: data['education'],
+                      text: "Education and Training"
+                    },
+                    {
+                      name: "housing",
+                      value: "Housing",
+                      checked: data['housing'],
+                      text: "Housing"
+                    },
+                    {
+                      name: "family",
+                      value: "Family and Children",
+                      checked: data['family'],
+                      text: "Family and Children"
+                    },
+                    {
+                      name: "social",
+                      value: "Social and Community",
+                      checked: data['social'],
+                      text: "Social and Community"
+                    }
+                  ]
+                }) }}
+      </details>
+
+      <hr>
+      <br>
+
+      <details class="govuk-details" open>
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+                Location
+              </span>
+        </summary>
+
+        {{ govukCheckboxes({
+                  name: "location",
+                  classes: "govuk-checkboxes--small",
+                  items: [
+                    {
+                      name: "ukwide",
+                      value: "Uk Wide",
+                      checked: data['ukwide'],
+                      text: "Uk Wide"
+                    },
+                    {
+                      name: "england",
+                      value: "England",
+                      checked: data['england'],
+                      text: "England"
+                    },
+                    {
+                      name: "scotland",
+                      value: "Scotland",
+                      checked: data['scotland'],
+                      text: "Scotland"
+                    },
+                    {
+                      name: "wales",
+                      value: "Wales",
+                      checked: data['wales'],
+                      text: "Wales"
+                    },
+                    {
+                      name: "NI",
+                      value: "Northern Ireland",
+                      checked: data['NI'],
+                      text: "Northern Ireland"
+                    },
+                    {
+                      name: "remote",
+                      value: "Accessible anywhere (remote/online only)",
+                      checked: data['remote'],
+                      text: "Accessible anywhere (remote/online only)"
+                    }
+                  ]
+                }) }}
+      </details>
+
+      <hr>
+      <br>
+
+     {{ govukButton({
+            text: "Apply filters"
+          }) }}
+
+      <div id="passport-issued-hint" class="govuk-hint">
+        <a href="#">(clear filters)</a>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}
