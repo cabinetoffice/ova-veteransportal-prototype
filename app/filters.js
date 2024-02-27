@@ -6,20 +6,19 @@ addFilter('bold', function (content) {
 }, { renderAsHtml: true })
 
 addFilter('sortResults', function (filters) {
+  var searchableFilters = []
   filters.forEach(f => {
-    if (f.data == null || f.data == undefined) {
-      filters.splice(filters.indexOf(f), 1)
+    if (f.data != null || f.data != undefined) {
+      searchableFilters.push(f)
     }
   })
 
-  if (filters.length == 0) {
+  if (searchableFilters.length == 0) {
     return orgs
   }
 
-  console.log("filters:", filters)
-
   var results = []
-  filters.forEach(filter => {
+  searchableFilters.forEach(filter => {
     switch (filter.filterType) {
       case "topic":
         orgs.forEach(org => {
@@ -42,7 +41,7 @@ addFilter('sortResults', function (filters) {
   })
 
   var singleFilterList = []
-  filters.forEach(f => {
+  searchableFilters.forEach(f => {
     f.data.forEach(data => {
       singleFilterList.push(data)
     })
