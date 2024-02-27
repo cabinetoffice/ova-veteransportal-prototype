@@ -22,14 +22,14 @@ addFilter('sortResults', function (filters) {
     switch (filter.filterType) {
       case "topic":
         orgs.forEach(org => {
-          if (filter.data.includes(org.helpsWith)) {
+          if (filter.data.includes(org.helpsWith) && !results.includes(org)) {
           results.push(org)
           }
         })
         break
       case "location":
         orgs.forEach(org => {
-          if (filter.data.includes(org.location)) {
+          if (filter.data.includes(org.location) && !results.includes(org)) {
             results.push(org)
           }
         })
@@ -89,7 +89,7 @@ var orgs = [
     link: "https://www.broughtonhouse.com/",
     description: "A residential and nursing care home for veterans in Salford, Greater Manchester.",
     helpsWith: "Housing",
-    location: "North West England"
+    location: "England"
   },
   {
     name: "Building Heroes",
