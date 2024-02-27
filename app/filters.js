@@ -40,6 +40,10 @@ addFilter('sortResults', function (filters) {
     }
   })
 
+  if (searchableFilters.length == 1) {
+    return results
+  }
+
   var singleFilterList = []
   searchableFilters.forEach(f => {
     f.data.forEach(data => {
@@ -47,21 +51,15 @@ addFilter('sortResults', function (filters) {
     })
   })
 
-  console.log("results:", results)
-  console.log("single filter list: ", singleFilterList)
+  var finalResults = []
 
-  // var finalResults = []
+  results.forEach(r => {
+    if (singleFilterList.includes(r.helpsWith) && singleFilterList.includes(r.location)) {
+      finalResults.push(r)
+    }
+  })
 
-  // results.forEach(r => {
-  //   console.log(!!singleFilterList.includes(r.helpsWith) && !!singleFilterList.includes(r.location))
-  //   if (singleFilterList.includes(r.helpsWith) && singleFilterList.includes(r.location)) {
-  //     finalResults.push(r)
-  //   }
-  // })
-
-  // console.log("finalResults:", finalResults)
-
-  return results
+  return finalResults
 })
 
 var orgs = [
