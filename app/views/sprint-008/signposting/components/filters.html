@@ -14,57 +14,39 @@
                   classes: "govuk-checkboxes--small",
                   items: [
                     {
-                      name: 'finance',
                       value: "Finance",
-                      checked: data['finance'],
                       text: "Finance"
                     },
                     {
-                      name: "phealth",
                       value: "Physical health",
-                      checked: data['phealth'],
                       text: "Physical health"
                     },
                     {
-                      name: "mhealth",
-                      value: "Mental Health",
-                      checked: data['mhealth'],
+                      value: "Mental health",
                       text: "Mental Health"
                     },
                     {
-                      name: "legal",
                       value: "Legal help",
-                      checked: data['legal'],
                       text: "Legal help"
                     },
                     {
-                      name: "employment",
                       value: "Employment",
-                      checked: data['employment'],
                       text: "Employment"
                     },
                     {
-                      name: "education",
-                      value: "Education and Training",
-                      checked: data['education'],
+                      value: "Education and training",
                       text: "Education and Training"
                     },
                     {
-                      name: "housing",
                       value: "Housing",
-                      checked: data['housing'],
                       text: "Housing"
                     },
                     {
-                      name: "family",
                       value: "Family and Children",
-                      checked: data['family'],
                       text: "Family and Children"
                     },
                     {
-                      name: "social",
-                      value: "Social and Community",
-                      checked: data['social'],
+                      value: "Social and community",
                       text: "Social and Community"
                     }
                   ]
@@ -81,44 +63,32 @@
               </span>
         </summary>
 
-        {{ govukCheckboxes({
+        {{ govukCheckboxes({ 
                   name: "location",
                   classes: "govuk-checkboxes--small",
                   items: [
                     {
-                      name: "ukwide",
-                      value: "Uk Wide",
-                      checked: data['ukwide'],
-                      text: "Uk Wide"
+                      value: "UK Wide",
+                      text: "UK Wide"
                     },
                     {
-                      name: "england",
                       value: "England",
-                      checked: data['england'],
                       text: "England"
                     },
                     {
-                      name: "scotland",
                       value: "Scotland",
-                      checked: data['scotland'],
                       text: "Scotland"
                     },
                     {
-                      name: "wales",
                       value: "Wales",
-                      checked: data['wales'],
                       text: "Wales"
                     },
                     {
-                      name: "NI",
                       value: "Northern Ireland",
-                      checked: data['NI'],
                       text: "Northern Ireland"
                     },
                     {
-                      name: "remote",
                       value: "Accessible anywhere (remote/online only)",
-                      checked: data['remote'],
                       text: "Accessible anywhere (remote/online only)"
                     }
                   ]
