@@ -33,6 +33,7 @@
         {filterType: "location", data: data['location']}
     ]%}
 
+  {# sortResults is a custom function that can be found in filter.js file #}
   {% set results = filters | sortResults %}
 
   {% for r in results %}
