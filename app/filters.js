@@ -135,5 +135,47 @@ var orgs = [
     description: "Links Combined Forces provides mental health support for veterans and blue light teams and their families living in Carmarthenshire.",
     helpsWith: "Mental health",
     location: "Wales"
+  },
+  {
+    name: "Op Courage",
+    link: "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
+    description: "A specialist mental health service designed to help veterans, their families and serving personnel preparing to leave the armed forces.",
+    helpsWith: "Mental health",
+    location: "England"
+  },
+  {
+    name: "Op Fortitude",
+    link: "https://www.riverside.org.uk/care-and-support/veterans/opfortitude/",
+    description: "Op Fortitude is centralised referral pathway into veteran supported housing. Referrals can be made by veterans themselves as well as any organisations supporting them.",
+    helpsWith: "Housing",
+    location: "UK Wide"
+  },
+  {
+    name: "Op Nova",
+    link: "/#",
+    description: "Op Nova provides support for veterans who are in contact with the justice system, helping them to access the services they need, including employment, legal advice and referrals to support with housing and mental health.",
+    helpsWith: "Employment",
+    location: "UK Wide"
+  },
+  {
+    name: "Op Restore",
+    link: "https://www.nhs.uk/nhs-services/armed-forces-community/veterans-service-leavers-non-mobilised-reservists/",
+    description: "Op Restore supports veterans with service attributable physical health conditions, regardless of how long they served for and when they left the Armed Forces.",
+    helpsWith: "Physical health",
+    location: "England"
+  },
+  {
+    name: "Outside the Wire",
+    link: "https://www.matthewproject.org/outsidethewire",
+    description: "A bespoke drug and alcohol service offering confidential advice and support to current and ex HM Forces personnel and their families, across Norfolk, Suffolk, Essex, and Cambridgeshire.",
+    helpsWith: "Mental health",
+    location: "England"
+  },
+  {
+    name: "Phoenix Heroes",
+    link: "https://www.phoenixheroes.co.uk/",
+    description: "A Community Interest Company based in Colchester, that supports veterans UK wide by providing them with access to outdoor activities and offers support with those struggling with mental health difficulties.",
+    helpsWith: "Mental health",
+    location: "UK Wide"
   }
 ]
