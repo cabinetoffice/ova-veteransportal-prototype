@@ -8,6 +8,9 @@ addFilter('bold', function (content) {
 addFilter('sortResults', function (filters) {
   var searchableFilters = []
   filters.forEach(f => {
+    if (typeof f.data === "string" && f.data.length === 0) {
+      return
+    }
     if (f.data != null || f.data != undefined) {
       searchableFilters.push(f)
     }
