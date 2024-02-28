@@ -5,53 +5,60 @@
   </p>
 
   <div class="search-terms">
-
-    <div class="search-about">
-      <p>
-        <strong>About</strong>
-      </p>
-      <div class="search-tag">
-        <p> &#x2715; Finance</p>
+    {%if data['topic']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['topic'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
       </div>
-    </div>
+    {% endif %}
 
+    {% if data['location']%}
     <div class="search-in">
       <p>
         <strong>In</strong>
       </p>
-      <div class="search-tag">
-        <p> &#x2715; England</p>
-      </div>
+      {%for l in data['location']%}
+        <div class="search-tag">
+          <p> &#x2715; {{l}}</p>
+        </div>
+      {% endfor %}
     </div>
+    {% endif %}
 
   </div>
 
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-  {% set filters = [
+{% set filters = [
         {filterType: "topic", data: data['topic']},
         {filterType: "location", data: data['location']}
     ]%}
 
-  {# sortResults is a custom function that can be found in filter.js file #}
-  {% set results = filters | sortResults %}
+{# sortResults is a custom function that can be found in filter.js file #}
+{% set results = filters | sortResults %}
 
-  {% for r in results %}
-    <div class="result">
-      <h2 class="govuk-heading-m">
-        <a href="{{r.link}}">{{r.name}}</a>
-      </h2>
-      <p>
-        {{r.description}}
-      </p>
-      <div id="charity-hint" class="govuk-hint charity">
+{% for r in results %}
+  <div class="result">
+    <h2 class="govuk-heading-m">
+      <a href="{{r.link}}">{{r.name}}</a>
+    </h2>
+    <p>
+      {{r.description}}
+    </p>
+    <div id="charity-hint" class="govuk-hint charity">
         Help with: {{r.helpsWith}}
-      </div>
-      <div id="charity-hint" class="govuk-hint">
-        Location: {{r.location}}
-      </div>
     </div>
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-  {% endfor %}
+    <div id="charity-hint" class="govuk-hint">
+        Location: {{r.location}}
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+{% endfor %}
 
 {% endblock %}
