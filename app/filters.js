@@ -69,6 +69,7 @@ var orgs = [
   {
     name: "Association of Service Drop in Centres (ASDIC)",
     link: "https://www.asdic.org.uk/",
+    subpage: "asdic",
     description: "ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.",
     helpsWith: "Social and community",
     location: "UK Wide"
@@ -76,6 +77,7 @@ var orgs = [
   {
     name: "Blesma: The Limbless Veterans Charity",
     link: "https://blesma.org/",
+    subpage: "blesma",
     description: "A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.",
     helpsWith: "Social and community",
     location: "UK Wide"

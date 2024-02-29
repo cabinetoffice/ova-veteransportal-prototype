@@ -2,7 +2,7 @@
 
 {% block pageTitle %}
   Content page template – {{ serviceName }} – GOV.UK Prototype Kit
-  {% endblock %}
+{% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -11,22 +11,24 @@
   }) }}
 {% endblock %}
 
-{% block content%}
+{% block content %}
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        {{data['org-name']}}
+        Heading goes here
       </h1>
 
       <p>
-        {{data['content']}}
+        This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
       </p>
 
       <p>
-        Read more <a href={{data['website']}}>about this topic</a>.
+        Read more <a href="/path/of/page">about this topic</a>.
       </p>
 
     </div>
   </div>
+
 {% endblock %}
