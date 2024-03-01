@@ -36,8 +36,18 @@
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 {% set filters = [
-        {filterType: "topic", data: data['topic']},
-        {filterType: "location", data: data['location']}
+        {filterType: "health", data: data['health']},
+        {filterType: "finance", data: data['finance']},
+        {filterType: "legalHelp", data: data['legalHelp']},
+        {filterType: "employment", data: data['employment']},
+        {filterType: "educationTraining", data: data['educationTraining']},
+        {filterType: "housing", data: data['housing']},
+        {filterType: "family", data: data['family']},
+        {filterType: "community", data: data['community']},
+        {filterType: "england", data: data['england']},
+        {filterType: "northernIreland", data: data['northernIreland']},
+        {filterType: "scotland", data: data['scotland']},
+        {filterType: "wales", data: data['wales']}
     ]%}
 
 {# sortResults is a custom function that can be found in filter.js file #}

@@ -6,6 +6,8 @@ addFilter('bold', function (content) {
 }, { renderAsHtml: true })
 
 addFilter('sortResults', function (filters) {
+  console.log("filters: ", filters)
+
   var searchableFilters = []
   filters.forEach(f => {
     if (typeof f.data === "string" && f.data.length === 0) {
@@ -23,16 +25,79 @@ addFilter('sortResults', function (filters) {
   var results = []
   searchableFilters.forEach(filter => {
     switch (filter.filterType) {
-      case "topic":
+      case "health":
         orgs.forEach(org => {
-          if (filter.data.includes(org.helpsWith) && !results.includes(org)) {
-          results.push(org)
+          if (filter.data.includes(org.health) && !results.includes(org)) {
+            results.push(org)
           }
         })
         break
-      case "location":
+      case "finance":
         orgs.forEach(org => {
-          if (filter.data.includes(org.location) && !results.includes(org)) {
+          if (filter.data.includes(org.finance) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "legalHelp":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.legalHelp) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "employment":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.employment) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "educationTraining":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.educationTraining) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "housing":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.housing) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "family":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.family) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "england":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.england) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "northernIreland":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.northernIreland) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "scotland":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.scotland) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "wales":
+        orgs.forEach(org => {
+          if (filter.data.includes(org.wales) && !results.includes(org)) {
             results.push(org)
           }
         })
@@ -67,9 +132,15 @@ addFilter('sortResults', function (filters) {
 
 var orgs = [
   {
+    name: "Veterans UK",
+    link: "https://www.gov.uk/government/organisations/veterans-uk",
+    description: "Provides free support for veterans and their families, including a helpline, Veterans Welfare Service, Defence Transition Services and injury/bereavement compensation scheme payments.",
+    health: "Mental health",
+    location: "UK Wide"
+  },
+  {
     name: "Association of Service Drop in Centres (ASDIC)",
     link: "https://www.asdic.org.uk/",
-    subpage: "asdic",
     description: "ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.",
     helpsWith: "Social and community",
     location: "UK Wide"
@@ -77,7 +148,6 @@ var orgs = [
   {
     name: "Blesma: The Limbless Veterans Charity",
     link: "https://blesma.org/",
-    subpage: "blesma",
     description: "A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.",
     helpsWith: "Social and community",
     location: "UK Wide"
@@ -94,7 +164,7 @@ var orgs = [
     link: "https://www.broughtonhouse.com/",
     description: "A residential and nursing care home for veterans in Salford, Greater Manchester.",
     helpsWith: "Housing",
-    location: "England"
+    england: "England wide"
   },
   {
     name: "Building Heroes",
