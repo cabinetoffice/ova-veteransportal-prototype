@@ -22,26 +22,100 @@ addFilter('sortResults', function (filters) {
 
   const includesAny = (arr, values) => values.some(v => arr.includes(v));
 
+  console.log("searchable filters: ", searchableFilters)
+
   var results = []
   searchableFilters.forEach(filter => {
     switch (filter.filterType) {
+      case "health":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.health) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "finance":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.finance) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
       case "legalHelp":
         orgs.forEach(org => {
-          if (includesAny(filter.data, org.legalHelp) && !results.includes(org)) {
+          if (includesAny(filter.data, org.helpsWith?.legalHelp) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "employment":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.employment) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "educationTraining":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.educationTraining) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "housing":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.housing) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "family":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.family) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "community":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.helpsWith?.community) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "ukWide":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.location?.ukWide) && !results.includes(org)) {
             results.push(org)
           }
         })
         break
       case "england":
         orgs.forEach(org => {
-          if (includesAny(filter.data, org.england) && !results.includes(org)) {
+          if (includesAny(filter.data, org.location?.england) && !results.includes(org)) {
             results.push(org)
           }
         })
         break
-      case "health":
+      case "northernIreland":
         orgs.forEach(org => {
-          if (includesAny(filter.data, org.health) && !results.includes(org)) {
+          if (includesAny(filter.data, org.location?.northernIreland) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "scotland":
+        orgs.forEach(org => {
+          if (includesAny(filter.data, org.location?.scotland) && !results.includes(org)) {
+            results.push(org)
+          }
+        })
+        break
+      case "wales":
+        orgs.forEach(org => {
+          console.log(filter.data)
+          console.log(org.location?.wales)
+          if (includesAny(filter.data, org.location?.wales) && !results.includes(org)) {
             results.push(org)
           }
         })
@@ -66,8 +140,19 @@ addFilter('sortResults', function (filters) {
   var finalResults = []
 
   results.forEach(r => {
-    if (includesAny(singleFilterList, r.legalHelp) &&
-      includesAny(singleFilterList, r.england)
+    if (includesAny(singleFilterList, r.helpsWith?.health) &&
+      includesAny(singleFilterList, r.helpsWith?.finance) &&
+      includesAny(singleFilterList, r.helpsWith?.legalHelp) &&
+      includesAny(singleFilterList, r.helpsWith?.employment) &&
+      includesAny(singleFilterList, r.helpsWith?.educationTraining) &&
+      includesAny(singleFilterList, r.helpsWith?.housing) &&
+      includesAny(singleFilterList, r.helpsWith?.family) &&
+      includesAny(singleFilterList, r.helpsWith?.community) &&
+      includesAny(singleFilterList, r.location?.ukWide) &&
+      includesAny(singleFilterList, r.location?.england) &&
+      includesAny(singleFilterList, r.location?.northernIreland) &&
+      includesAny(singleFilterList, r.location?.scotland) &&
+      includesAny(singleFilterList, r.location?.wales)
     ) {
       finalResults.push(r)
     }
@@ -81,28 +166,64 @@ var orgs = [
     name: "org name",
     link: "https://www.amicustrust.org/",
     description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    health: ["Mental health", "Physical health"],
-    finance: ["Pensions", "Compensations"],
-    legalHelp: ["General legal advice"],
-    england: ["East of England"],
+    helpsWith: {
+      health: ["Mental health", "Physical health"],
+      finance: ["Pensions", "Compensations"],
+      legalHelp: ["General legal advice"],
+      educationTraining: [""],
+      housing: ["Buying a home"],
+      family: [""],
+      community: [""]
+    },
+    location: {
+      ukWide: [""],
+      england: ["England wide"],
+      northernIreland: [""],
+      scotland: [""],
+      wales: [""]
+    }
   },
   {
     name: "Amicus Trust",
     link: "https://www.amicustrust.org/",
     description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Homelessness and crisis accommodation"],
-    health: ["Physical health"],
-    legalHelp: ["General legal advice"],
-    england: ["East of England"],
+    helpsWith: {
+      health: ["Mental health", "Physical health"],
+      finance: ["Pensions", "Compensations"],
+      legalHelp: ["General legal advice"],
+      educationTraining: [""],
+      housing: ["Buying a home"],
+      family: [""],
+      community: [""]
+    },
+    location: {
+      ukWide: [""],
+      england: ["East of England"],
+      northernIreland: [""],
+      scotland: [""],
+      wales: [""]
+    }
   },
   {
     name: "test org",
     link: "https://www.amicustrust.org/",
     description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    health: ["Mental health", "Physical health"],
-    helpsWith: ["Homelessness and crisis accommodation"],
-    legalHelp: ["General legal advice"],
-    england: [],
+    helpsWith: {
+      health: ["Mental health", "Physical health"],
+      finance: ["Pensions", "Compensations"],
+      legalHelp: ["General legal advice"],
+      educationTraining: [""],
+      housing: ["Buying a home"],
+      family: [""],
+      community: [""]
+    },
+    location: {
+      ukWide: [""],
+      england: [""],
+      northernIreland: [""],
+      scotland: [""],
+      wales: ["Wales wide"]
+    }
   },
   // {
   //   name: "Army Benevolent Fund",
