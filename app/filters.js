@@ -92,27 +92,27 @@ const locations = [
 const includesAny = (arr, values) => values.some(v => arr.includes(v));
 
 const orgs = [
-  {
-    name: "org name",
-    link: "https://www.amicustrust.org/",
-    description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Mental health", "Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-    location: ["England wide",]
-  },
-  {
-    name: "test org",
-    link: "https://www.amicustrust.org/",
-    description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-    location: ["Wales wide",]
-  },
-  {
-    name: "test org 2",
-    link: "https://www.amicustrust.org/",
-    description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-    location: ["Wales wide", "East of England", "Scotland wide"]
-  },
+  // {
+  //   name: "org name",
+  //   link: "https://www.amicustrust.org/",
+  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
+  //   helpsWith: ["Mental health", "Social care", "Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
+  //   location: ["England wide",]
+  // },
+  // {
+  //   name: "test org",
+  //   link: "https://www.amicustrust.org/",
+  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
+  //   helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
+  //   location: ["Wales wide",]
+  // },
+  // {
+  //   name: "test org 2",
+  //   link: "https://www.amicustrust.org/",
+  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
+  //   helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
+  //   location: ["Wales wide", "East of England", "Scotland wide"]
+  // },
   {
     name: "Amicus Trust",
     link: "https://www.amicustrust.org/",

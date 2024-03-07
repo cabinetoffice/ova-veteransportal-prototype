@@ -33,6 +33,15 @@
   margin: 0 20px 0 0;
   float: left;
 }
+
+.search-terms > div:nth-child(odd){
+  background:#f3f2f1
+}
+
+.search-terms > div:nth-child(even){
+  background: white
+}
+
 .search-tag {
   display: inline-block;
   border: 1px solid #000000;
@@ -56,4 +65,8 @@
 
 .helps-with p {
   color: white;
+}
+
+.contact-us {
+  float: right;
 }

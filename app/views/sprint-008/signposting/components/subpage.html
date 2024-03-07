@@ -13,12 +13,12 @@
 
 {% block content%}
   <div class="govuk-grid-row">
+
+    <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
+      {{data['name']}}
+    </h1>
+
     <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        {{data['name']}}
-      </h1>
-
       <p>
         {{data['description']}}
       </p>
@@ -47,7 +47,26 @@
           Location: {{data['local']}}
         </p>
       </div>
+    </div>
 
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-prototype-kit-common-templates-related-items">
+        <h2 class="govuk-heading-m">
+          Related content
+        </h2>
+        <ul class="govuk-list">
+          <li>
+            <a href="https://www.gov.uk/government/organisations/office-for-veterans-affairs" target="_blank">
+                Office for Veterans' Affairs
+              </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/veteran-card" target="_blank">
+                Apply for an HM Armed Forces Veteran Card
+              </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 {% endblock %}

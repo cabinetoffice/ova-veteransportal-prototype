@@ -19,187 +19,39 @@
   {# sortResults is a custom function that can be found in filter.js file #}
   {% set results = filters | sortResults %}
 
-  <h2 class="govuk-heading-m">
-    {{results | length}} results</h2>
-  <p>Sorted by: <strong>A-Z</strong>
-  </p>
-
-  <div class="search-terms">
-    {%if data['health']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['health'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {%if data['finance']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['finance'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {%if data['legalHelp']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['legalHelp'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['employment']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['employment'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['educationTraining']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['educationTraining'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['housing']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['housing'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['family']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['family'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['community']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['community'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['ukWide']%}
-      <div class="search-about">
-        <p>
-          <strong>In</strong>
-        </p>
-        {%for l in data['ukWide'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{l}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if data['england']%}
-      <div class="search-in">
-        <p>
-          <strong>In</strong>
-        </p>
-        {%for l in data['england']%}
-          <div class="search-tag">
-            <p> &#x2715; {{l}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-
-    {% if data['northernIreland']%}
-      <div class="search-in">
-        <p>
-          <strong>In</strong>
-        </p>
-        {%for l in data['northernIreland']%}
-          <div class="search-tag">
-            <p> &#x2715; {{l}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-
-    {% if data['scotland']%}
-      <div class="search-in">
-        <p>
-          <strong>In</strong>
-        </p>
-        {%for l in data['scotland']%}
-          <div class="search-tag">
-            <p> &#x2715; {{l}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-
-    {% if data['wales']%}
-      <div class="search-in">
-        <p>
-          <strong>In</strong>
-        </p>
-        {%for l in data['wales']%}
-          <div class="search-tag">
-            <p> &#x2715; {{l}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
+  <div class="govuk-grid-row ">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m">
+        {{results | length}} results</h2>
+      <p>
+      Sorted by: <strong>A-Z</strong>
+      </p>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="contact-us">
+        <img src="/public/images/email.svg"></img>
+        <a href="#">Get emails</a>
+        <img src="/public/images/rss-feed.svg"></img>
+        <a href="#">Subscribe to feed</a>
+      </p>
+    </div>
   </div>
 
+  {% include "./search-terms.html"%}
+
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  {% if results | length == 0 %}
+    <div>
+      <p class="govuk-!-font-weight-bold">There are no matching results.</p>
+      <p>Improve your search results by:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>removing filters</li>
+        <li>double-checking your spelling</li>
+        <li>using fewer keywords</li>
+        <li>searching for something less specific</li>
+      </ul>
+    </div>
+  {% endif %}
 
   {% for r in results %}
     <div class="result">

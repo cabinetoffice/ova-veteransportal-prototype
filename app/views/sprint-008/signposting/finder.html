@@ -6,10 +6,10 @@ Finder {{ serviceName }} – GOV.UK Prototype Kit
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
+    <h1 class="govuk-heading-l govuk-grid-column-two-thirds">
       Find support for veterans and their families
-    </h1>
+      </h1>
+    <div class="govuk-grid-column-two-thirds">
       <p>Use this service to find information about support available to ex members of the UK armed forces and their families.</p>
       <p>You can filter results by location and select as many areas of support as you need. Results will include information about:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -19,6 +19,26 @@ Finder {{ serviceName }} – GOV.UK Prototype Kit
       <div class="govuk-inset-text">
       UK veterans are defined as anyone who has served for at least one day in HM Armed Forces (Regular or Reserve) or Merchant Mariners who have seen duty on legally defined military operations.
     </div>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-prototype-kit-common-templates-related-items">
+        <h2 class="govuk-heading-m">
+          Related content
+        </h2>
+        <ul class="govuk-list">
+          <li>
+            <a href="https://www.gov.uk/government/organisations/office-for-veterans-affairs" target="_blank">
+                Office for Veterans' Affairs
+              </a>
+          </li>
+          <li>
+            <a href="https://www.gov.uk/veteran-card" target="_blank">
+                Apply for an HM Armed Forces Veteran Card
+              </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -42,10 +62,10 @@ Finder {{ serviceName }} – GOV.UK Prototype Kit
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
-     {% include "./components/filters.html"%}
+      {% include "./components/filters.html"%}
     </div>
 
-     <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-two-thirds">
       {% include "./components/results.html" %}
     </div>
   </div>

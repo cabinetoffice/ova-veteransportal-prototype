@@ -1,0 +1,178 @@
+{%block content%}
+
+<div class="search-terms">
+    {%if data['health']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['health'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {%if data['finance']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['finance'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {%if data['legalHelp']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['legalHelp'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['employment']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['employment'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['educationTraining']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['educationTraining'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['housing']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['housing'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['family']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['family'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['community']%}
+      <div class="search-about">
+        <p>
+          <strong>About</strong>
+        </p>
+        {%for t in data['community'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{t}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+     {%if data['ukWide']%}
+      <div class="search-about">
+        <p>
+          <strong>In</strong>
+        </p>
+        {%for l in data['ukWide'] %}
+          <div class="search-tag">
+            <p> &#x2715; {{l}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if data['england']%}
+      <div class="search-in">
+        <p>
+          <strong>In</strong>
+        </p>
+        {%for l in data['england']%}
+          <div class="search-tag">
+            <p> &#x2715; {{l}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+
+    {% if data['northernIreland']%}
+      <div class="search-in">
+        <p>
+          <strong>In</strong>
+        </p>
+        {%for l in data['northernIreland']%}
+          <div class="search-tag">
+            <p> &#x2715; {{l}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+
+    {% if data['scotland']%}
+      <div class="search-in">
+        <p>
+          <strong>In</strong>
+        </p>
+        {%for l in data['scotland']%}
+          <div class="search-tag">
+            <p> &#x2715; {{l}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+
+    {% if data['wales']%}
+      <div class="search-in">
+        <p>
+          <strong>In</strong>
+        </p>
+        {%for l in data['wales']%}
+          <div class="search-tag">
+            <p> &#x2715; {{l}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  </div>
+
+{%endblock%}
