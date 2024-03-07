@@ -1,7 +1,26 @@
 {%block content%}
 
+  {% set filters = [
+        {filterType: "health", data: data['health']},
+        {filterType: "finance", data: data['finance']},
+        {filterType: "legalHelp", data: data['legalHelp']},
+        {filterType: "employment", data: data['employment']},
+        {filterType: "educationTraining", data: data['educationTraining']},
+        {filterType: "housing", data: data['housing']},
+        {filterType: "family", data: data['family']},
+        {filterType: "community", data: data['community']},
+        {filterType: "ukWide", data: data['ukWide']},
+        {filterType: "england", data: data['england']},
+        {filterType: "northernIreland", data: data['northernIreland']},
+        {filterType: "scotland", data: data['scotland']},
+        {filterType: "wales", data: data['wales']}
+    ]%}
+
+  {# sortResults is a custom function that can be found in filter.js file #}
+  {% set results = filters | sortResults %}
+
   <h2 class="govuk-heading-m">
-    {{data['numberOfResults']}} results</h2>
+    {{results | length}} results</h2>
   <p>Sorted by: <strong>A-Z</strong>
   </p>
 
@@ -182,29 +201,10 @@
 
   <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-  {% set filters = [
-        {filterType: "health", data: data['health']},
-        {filterType: "finance", data: data['finance']},
-        {filterType: "legalHelp", data: data['legalHelp']},
-        {filterType: "employment", data: data['employment']},
-        {filterType: "educationTraining", data: data['educationTraining']},
-        {filterType: "housing", data: data['housing']},
-        {filterType: "family", data: data['family']},
-        {filterType: "community", data: data['community']},
-        {filterType: "ukWide", data: data['ukWide']},
-        {filterType: "england", data: data['england']},
-        {filterType: "northernIreland", data: data['northernIreland']},
-        {filterType: "scotland", data: data['scotland']},
-        {filterType: "wales", data: data['wales']}
-    ]%}
-
-  {# sortResults is a custom function that can be found in filter.js file #}
-  {% set results = filters | sortResults %}
-
   {% for r in results %}
     <div class="result">
       <h2 class="govuk-heading-m">
-        <a href="components/subpage?name={{r.name}}&description={{r.description}}&link={{r.link}}&helps={{r.helpsWith}}">{{r.name}}</a>
+        <a href="components/subpage?name={{r.name}}&description={{r.description}}&link={{r.link}}&helps={{r.helpsWith}}&local={{r.location}}&email={{r.email}}&number={{r.number}}">{{r.name}}</a>
       </h2>
       <p>
         {{r.description}}

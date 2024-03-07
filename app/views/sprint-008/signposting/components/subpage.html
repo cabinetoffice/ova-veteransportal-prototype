@@ -23,13 +23,30 @@
         {{data['description']}}
       </p>
 
+      <h2 class="govuk-heading-m">
+        {{data['name']}} has responsibility for 
+      </h2>
+
       <p>
         {{data['helps']}}
       </p>
 
+      <h3 class="govuk-heading-m">
+        Contact
+      </h3>
+
       <p>
-        Read more <a href={{data['link']}}>about this topic</a>.
+        Visit the <a href={{data['link']}}>organisation website</a>.
       </p>
+
+      <div class="helps-with">
+        <p>
+          Helps with: {{data['helps']}}
+        </p>
+        <p>
+          Location: {{data['local']}}
+        </p>
+      </div>
 
     </div>
   </div>
