@@ -37,26 +37,59 @@ addFilter('sortResults', function (filters) {
 
   let uniqueResults = [...new Set(results.flat(1))];
 
-  return uniqueResults
+  if (singleFilterList.length == 1) {
+    return uniqueResults
+  }
+
+  var helpsWithTopic = false
+  var helpsWithLocation = false
+  searchableFilters.forEach(filter => {
+    if (topics.includes(filter.filterType)) {
+      helpsWithTopic = true
+    }
+    if (locations.includes(filter.filterType)) {
+      helpsWithLocation = true
+    }
+    if (helpsWithTopic && helpsWithLocation) {
+      return
+    }
+  })
+
+  var shouldCheckBoth = helpsWithTopic && helpsWithLocation
+
+  var finalResults = []
+
+  if (shouldCheckBoth) {
+    uniqueResults.forEach(r => {
+      if (includesAny(r.helpsWith, singleFilterList) && includesAny(r.location, singleFilterList)) {
+        finalResults.push(r)
+      }
+    })
+    return finalResults
+  } else {
+    return uniqueResults
+  }
+  
 })
 
-const includesAny = (arr, values) => values.some(v => arr.includes(v));
-
-const topics = ["health",
+const topics = [
+  "health",
   "finance",
   "legalHelp",
   "employment",
   "educationTraining",
   "housing",
   "family",
-  "community",
-]
+  "community",]
 
-const locations = ["ukWide",
+const locations = [
+  "ukWide",
   "england",
   "northernIreland",
   "scotland",
   "wales",]
+
+const includesAny = (arr, values) => values.some(v => arr.includes(v));
 
 const orgs = [
   // {
