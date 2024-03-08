@@ -1,13 +1,28 @@
 {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
 
 {% block content %}
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label" for="search">
+      Search
+    </label>
+  </h1>
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input" id="search" name="search" type="text" spellcheck="false">
+    <div class="govuk-input__suffix search-icon" aria-hidden="true">
+      <img src="/public/images/search-icon.svg"></img>
+    </div>
+  </div>
+</div>
   <div class="card">
     <form class="govuk-fieldset" action="/sprint-008/signposting/finder" method="post">
 
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-                Health
+                Health and social care
               </span>
         </summary>
         {{ govukCheckboxes({
@@ -209,7 +224,7 @@
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-                Community and social 
+                Veterans community
               </span>
         </summary>
         {{ govukCheckboxes({

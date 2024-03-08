@@ -92,34 +92,51 @@ const locations = [
 const includesAny = (arr, values) => values.some(v => arr.includes(v));
 
 const orgs = [
-  // {
-  //   name: "org name",
-  //   link: "https://www.amicustrust.org/",
-  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-  //   helpsWith: ["Mental health", "Social care", "Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-  //   location: ["England wide",]
-  // },
-  // {
-  //   name: "test org",
-  //   link: "https://www.amicustrust.org/",
-  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-  //   helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-  //   location: ["Wales wide",]
-  // },
-  // {
-  //   name: "test org 2",
-  //   link: "https://www.amicustrust.org/",
-  //   description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-  //   helpsWith: ["Physical health", "Pensions", "Compensations", "General legal advice", "Buying a home"],
-  //   location: ["Wales wide", "East of England", "Scotland wide"]
-  // },
   {
-    name: "Amicus Trust",
+    name: "Royal British Legion",
+    link: "https://www.britishlegion.org.uk/",
+    email: "test@example.com",
+    number: "00000000000",
+    description: "Helps with a broad range of veteran services and signposting, from supporting with housing, healthcare, social care, employment, families and children, across the board, including providing dedicated care homes for older veterans, support for carers, to helping ex-serving personnel and their families with independent living.",
+    helpsWith: [
+    "Mental health",
+    "Physical health",
+    "Social care",
+    "Pensions",
+    "Compensations",
+    "Benefits",
+    "Financial help",
+    "Debt advice",
+    "Funeral costs",
+    "Discounts",
+    "General legal advice",
+    "Support for those in the justice system",
+    "Transition support and career advice",
+    "Support for jobseekers",
+    "Starting a business",
+    "Apprenticeships and in-work training",
+    "Other training and education",
+    "Bursaries, scholarships and grants",
+    "Homelessness and crisis accommodation",
+    "Care homes and supported housing",
+    "Renting a home",
+    "Buying a home",
+    "Support for veterans' spouses and partners",
+    "Childcare and custody",
+    "Support with relationships",
+    "Domestic abuse",
+    "Drop-ins and breakfast clubs",
+    "Leisure activities",
+    "Volunteering opportunities"],
+    location: ["UK Wide"]
+  },
+  {
+    name: "Amicus",
     link: "https://www.amicustrust.org/",
     email: "test@example.com",
     number: "00000000000",
     description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Mental health", "Physical health", "Pensions", "Buying a home"],
+    helpsWith: ["Mental health ", "Physical health ", "Pensions ", "Buying a home "],
     location: ["East of England"]
   },
   {

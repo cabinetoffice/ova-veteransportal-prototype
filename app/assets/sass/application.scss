@@ -70,3 +70,14 @@
 .contact-us {
   float: right;
 }
+
+.search-icon {
+  background-color: #1d70b8;
+  &:hover {
+    background-color: #207dce;
+  }
+}
+
+.search-icon img {
+  display: flex;
+}
