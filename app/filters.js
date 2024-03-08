@@ -99,35 +99,35 @@ const orgs = [
     number: "00000000000",
     description: "Helps with a broad range of veteran services and signposting, from supporting with housing, healthcare, social care, employment, families and children, across the board, including providing dedicated care homes for older veterans, support for carers, to helping ex-serving personnel and their families with independent living.",
     helpsWith: [
-    "Mental health",
-    "Physical health",
-    "Social care",
-    "Pensions",
-    "Compensations",
-    "Benefits",
-    "Financial help",
-    "Debt advice",
-    "Funeral costs",
-    "Discounts",
-    "General legal advice",
-    "Support for those in the justice system",
-    "Transition support and career advice",
-    "Support for jobseekers",
-    "Starting a business",
-    "Apprenticeships and in-work training",
-    "Other training and education",
-    "Bursaries, scholarships and grants",
-    "Homelessness and crisis accommodation",
-    "Care homes and supported housing",
-    "Renting a home",
-    "Buying a home",
-    "Support for veterans' spouses and partners",
-    "Childcare and custody",
-    "Support with relationships",
-    "Domestic abuse",
-    "Drop-ins and breakfast clubs",
-    "Leisure activities",
-    "Volunteering opportunities"],
+    " mental health",
+    " physical health",
+    " social care",
+    " pensions",
+    " compensations",
+    " benefits",
+    " financial help",
+    " debt advice",
+    " funeral costs",
+    " discounts",
+    " general legal advice",
+    " support for those in the justice system",
+    " transition support and career advice",
+    " support for jobseekers",
+    " starting a business",
+    " apprenticeships and in-work training",
+    " other training and education",
+    " bursaries, scholarships and grants",
+    " homelessness and crisis accommodation",
+    " care homes and supported housing",
+    " renting a home",
+    " buying a home",
+    " support for veterans' spouses and partners",
+    " childcare and custody",
+    " support with relationships",
+    " domestic abuse",
+    " drop-ins and breakfast clubs",
+    " leisure activities",
+    " volunteering opportunities"],
     location: ["UK Wide"]
   },
   {
@@ -136,42 +136,42 @@ const orgs = [
     email: "test@example.com",
     number: "00000000000",
     description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: ["Mental health ", "Physical health ", "Pensions ", "Buying a home "],
+    helpsWith: [" mental health", " physical health", " pensions", " Buying a home"],
     location: ["East of England"]
   },
   {
     name: "Army Benevolent Fund",
     link: "https://armybenevolentfund.org/",
     description: "Offers grants to individuals in need of help with a range of issues, including debt, funeral costs, household expenses, elderly care and mobility.",
-    helpsWith: ["General legal advice"],
+    helpsWith: ["general legal advice"],
     location: ["East of England"]
   },
   {
     name: "Association of Service Drop in Centres (ASDIC)",
     link: "https://www.asdic.org.uk/",
     description: "ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.",
-    helpsWith: ["Drop-ins and breakfast clubs"],
+    helpsWith: ["drop-ins and breakfast clubs"],
     location: ["UK Wide"]
   },
   {
     name: "Blesma: The Limbless Veterans Charity",
     link: "https://blesma.org/",
     description: "A service charity that supports veterans who have a life-altering injury such as loss of a limb or eye, offering practical and emotional support to  and them and their families.",
-    helpsWith: ["Physical health"],
+    helpsWith: ["physical health"],
     location: ["UK Wide"]
   },
   {
     name: "Blind Veterans UK",
     link: "https://www.blindveterans.org.uk/",
     description: "Provides rehabilitation, training, practical advice and emotional support to veterans regardless of how or when they lost their sight.",
-    helpsWith: ["Physical health"],
+    helpsWith: ["physical health"],
     location: ["UK Wide"]
   },
   {
     name: "Broughton House",
     link: "https://www.broughtonhouse.com/",
     description: "A residential and nursing care home for veterans in Salford, Greater Manchester.",
-    helpsWith: ["Care homes and supported housing"],
+    helpsWith: ["care homes and supported housing"],
     location: ["England wide"]
   },
   {
@@ -185,14 +185,14 @@ const orgs = [
     name: "Defence Discount",
     link: "https://www.defencediscountservice.co.uk",
     description: "Training and employment support for veterans who want to work in the construction industry.",
-    helpsWith: ["Transition support and career advice"],
+    helpsWith: ["transition support and career advice"],
     location: ["Wales wide"]
   },
   {
     name: "Defence Gardens",
     link: "https://defencegardens.org/",
     description: "A national network of gardens which host the delivery and evaluation of nature-based therapy for Armed Forces Service Leavers and Veterans and their families.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
@@ -206,7 +206,7 @@ const orgs = [
     name: "Fighting With Pride",
     link: "https://www.fightingwithpride.org.uk/",
     description: "Supports LGBT+ veterans, serving personnel and families guidance and signposting to partner organisations for a wide range of help including health, housing, employment and financial advice.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
@@ -227,7 +227,7 @@ const orgs = [
     name: "Forward Assist",
     link: "https://www.forward-assist.com/",
     description: "Forward Assist provides support, advice, guidance and advocacy aimed at improving the mental and physical health of veterans.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
@@ -241,35 +241,35 @@ const orgs = [
     name: "Help for Heroes",
     link: "https://www.helpforheroes.org.uk/",
     description: "Help for Heroes supports members of the armed forces community with their and mental health and a range of welfare issues.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "Housing Options Scotland",
     link: "https://housingoptionsscotland.org.uk/",
     description: "Housing Options Scotland helps disabled people, older adults and members of the Armed Forces community, including veterans, to find a home that suits their needs.",
-    helpsWith: ["Homelessness and crisis accommodation"],
+    helpsWith: ["homelessness and crisis accommodation"],
     location: ["Scotland wide"],
   },
   {
     name: "Links Combined Forces",
     link: "https://www.links.uk.net/",
     description: "Links Combined Forces provides mental health support for veterans and blue light teams and their families living in Carmarthenshire.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["Wales wide"]
   },
   {
     name: "Op Courage",
     link: "https://www.nhs.uk/nhs-services/armed-forces-community/mental-health/veterans-reservists/",
     description: "A specialist mental health service designed to help veterans, their families and serving personnel preparing to leave the armed forces.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["England wide"],
   },
   {
     name: "Op Fortitude",
     link: "https://www.riverside.org.uk/care-and-support/veterans/opfortitude/",
     description: "Op Fortitude is centralised referral pathway into veteran supported housing. Referrals can be made by veterans themselves as well as any organisations supporting them.",
-    helpsWith: ["Homelessness and crisis accommodation"],
+    helpsWith: ["homelessness and crisis accommodation"],
     location: ["UK Wide"]
   },
   {
@@ -283,56 +283,56 @@ const orgs = [
     name: "Op Restore",
     link: "https://www.nhs.uk/nhs-services/armed-forces-community/veterans-service-leavers-non-mobilised-reservists/",
     description: "Op Restore supports veterans with service attributable physical health conditions, regardless of how long they served for and when they left the Armed Forces.",
-    helpsWith: ["Physical health"],
+    helpsWith: ["physical health"],
     location: ["England wide"]
   },
   {
     name: "Outside the Wire",
     link: "https://www.matthewproject.org/outsidethewire",
     description: "A bespoke drug and alcohol service offering confidential advice and support to current and ex HM Forces personnel and their families, across Norfolk, Suffolk, Essex, and Cambridgeshire.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["England wide"]
   },
   {
     name: "Phoenix Heroes",
     link: "https://www.phoenixheroes.co.uk/",
     description: "A Community Interest Company based in Colchester, that supports veterans UK wide by providing them with access to outdoor activities and offers support with those struggling with mental health difficulties.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "PTSD Resolution",
     link: "https://ptsdresolution.org/",
     description: "Helps veterans and their families who are struggling with mental health. The programme is community-based, with treatment and support provided locally through a nationwide network of 200 therapists, accredited by the Professional Standards Authority.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "RAFA (Royal Air Force Association)",
     link: "https://rafa.org.uk/",
     description: "Helps members and ex-members of the RAF, as well as their spouses, widows and dependants with a range of issues, including mental health support.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "RBL (Royal British Legion",
     link: "https://www.britishlegion.org.uk/",
     description: "Helps serving members of the armed forces and veterans and their families with a range of issues, including mental health support via a helpline, or online chat or in locations across the UK.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "SSAFA",
     link: "https://www.ssafa.org.uk/",
     description: "SSAFA does not deliver medical, counselling or advocacy services, but can help with referral while offering practical support with a wide range of other issues.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
     name: "Stoll",
     link: "https://www.stoll.org.uk/",
     description: "Provides support and access to social housing for veterans.",
-    helpsWith: ["Homelessness and crisis accommodation"],
+    helpsWith: ["homelessness and crisis accommodation"],
     location: ["UK Wide"]
   },
   {
@@ -346,7 +346,7 @@ const orgs = [
     name: "Walking with the Wounded",
     link: "https://walkingwiththewounded.org.uk/",
     description: "Walking with the Wounded supports veterans and their families with mental health, employment and care coordination following discharge from service.",
-    helpsWith: ["Mental health"],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   }
 ]
