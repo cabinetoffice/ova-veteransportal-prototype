@@ -93,63 +93,29 @@ const includesAny = (arr, values) => values.some(v => arr.includes(v));
 
 const orgs = [
   {
-    name: "Royal British Legion",
-    link: "https://www.britishlegion.org.uk/",
-    email: "test@example.com",
-    number: "00000000000",
-    description: "Helps with a broad range of veteran services and signposting, from supporting with housing, healthcare, social care, employment, families and children, across the board, including providing dedicated care homes for older veterans, support for carers, to helping ex-serving personnel and their families with independent living.",
-    helpsWith: [
-    " mental health",
-    " physical health",
-    " social care",
-    " pensions",
-    " compensations",
-    " benefits",
-    " financial help",
-    " debt advice",
-    " funeral costs",
-    " discounts",
-    " general legal advice",
-    " support for those in the justice system",
-    " transition support and career advice",
-    " support for jobseekers",
-    " starting a business",
-    " apprenticeships and in-work training",
-    " other training and education",
-    " bursaries, scholarships and grants",
-    " homelessness and crisis accommodation",
-    " care homes and supported housing",
-    " renting a home",
-    " buying a home",
-    " support for veterans' spouses and partners",
-    " childcare and custody",
-    " support with relationships",
-    " domestic abuse",
-    " drop-ins and breakfast clubs",
-    " leisure activities",
-    " volunteering opportunities"],
-    location: ["UK Wide"]
-  },
-  {
     name: "Amicus",
     link: "https://www.amicustrust.org/",
     email: "test@example.com",
     number: "00000000000",
-    description: "Provides supported accommodation to veterans (16 to 65 years old) who are homeless or at risk of homelessness in the East of England.",
-    helpsWith: [" mental health", " physical health", " pensions", " Buying a home"],
+    description: "Support for homeless veterans in partnership with the Royal British Legion. Provides homeless veterans with dedicated accommodation for up to 2 years and support services in areas such as education and employment, mental health and life skills.",
+    helpsWith: [" homelessness and crisis accommodation", " care homes and supported housing"],
     location: ["East of England"]
   },
   {
     name: "Army Benevolent Fund",
     link: "https://armybenevolentfund.org/",
+    number: "0207 901 8900",
+    email: "info@armybenevolentfund.org",
     description: "Offers grants to individuals in need of help with a range of issues, including debt, funeral costs, household expenses, elderly care and mobility.",
     helpsWith: ["general legal advice"],
-    location: ["East of England"]
+    location: ["UK Wide"]
   },
   {
     name: "Association of Service Drop in Centres (ASDIC)",
     link: "https://www.asdic.org.uk/",
-    description: "ASDIC connects the national network of drop-Ins to offer local community support  to the ex-military community and their families.",
+    email: "admin@asdic.org.uk",
+    number: "01622 278110",
+    description: "ASDIC connects the national network of drop-Ins to offer local community support to the ex-military community and their families.",
     helpsWith: ["drop-ins and breakfast clubs"],
     location: ["UK Wide"]
   },
@@ -178,7 +144,7 @@ const orgs = [
     name: "Combat Stress",
     link: "https://combatstress.org.uk/",
     description: "A Ministry of Defence vetted discount card that allows veterans and members of the armed forces community to receive military discounts.",
-    helpsWith: [],
+    helpsWith: ["mental health"],
     location: ["UK Wide"]
   },
   {
@@ -199,7 +165,7 @@ const orgs = [
     name: "Felix Fund",
     link: "https://www.felixfund.org.uk/",
     description: "Helps anyone who has conducted or assisted with Explosive Ordnance Disposal with a wide range of issues, including physical and mental health and accessing grants.",
-    helpsWith: [],
+    helpsWith: [" physical health", "mental health"],
     location: ["UK Wide"]
   },
   {
@@ -213,14 +179,14 @@ const orgs = [
     name: "Forces Money Plan",
     link: "https://forcesmoneyplan.org/",
     description: "Free, confidential advice from accredited financial advisors who have volunteered their time and expertise to support armed forces personnel and veterans with financial advice.",
-    helpsWith: [],
+    helpsWith: ["financial help"],
     location: ["UK Wide"]
   },
   {
     name: "Forces Pension Society",
     link: "https://forcespensionsociety.org/",
     description: "An independent, not-for-profit organisation that acts as a pension watchdog for the military community. There is an annual membership fee to access their services.",
-    helpsWith: [],
+    helpsWith: ["pensions"],
     location: ["UK Wide"]
   },
   {
@@ -234,7 +200,7 @@ const orgs = [
     name: "Haig Housing",
     link: "https://www.haighousing.org.uk/",
     description: "Haig Housing provides UK wide housing built for veterans and their families in housing need.",
-    helpsWith: [],
+    helpsWith: ["renting a home", "care homes and supported housing"],
     location: ["UK Wide"]
   },
   {
@@ -274,9 +240,9 @@ const orgs = [
   },
   {
     name: "Op Nova",
-    link: "/#",
+    link: "https://www.forcesemployment.org.uk/programmes/op-nova/",
     description: "Op Nova provides support for veterans who are in contact with the justice system, helping them to access the services they need, including employment, legal advice and referrals to support with housing and mental health.",
-    helpsWith: [],
+    helpsWith: ["other training and education"],
     location: ["UK Wide"]
   },
   {
@@ -315,15 +281,47 @@ const orgs = [
     location: ["UK Wide"]
   },
   {
-    name: "RBL (Royal British Legion",
+    name: "Royal British Legion",
     link: "https://www.britishlegion.org.uk/",
-    description: "Helps serving members of the armed forces and veterans and their families with a range of issues, including mental health support via a helpline, or online chat or in locations across the UK.",
-    helpsWith: ["mental health"],
+    email: "test@example.com",
+    number: "0808 802 8080",
+    description: "Helps with a broad range of veteran services and signposting, from supporting with housing, healthcare, social care, employment, families and children, across the board, including providing dedicated care homes for older veterans, support for carers, to helping ex-serving personnel and their families with independent living.",
+    helpsWith: [
+    " mental health",
+    " physical health",
+    " social care",
+    " pensions",
+    " compensations",
+    " benefits",
+    " financial help",
+    " debt advice",
+    " funeral costs",
+    " discounts",
+    " general legal advice",
+    " support for those in the justice system",
+    " transition support and career advice",
+    " support for jobseekers",
+    " starting a business",
+    " apprenticeships and in-work training",
+    " other training and education",
+    " bursaries, scholarships and grants",
+    " homelessness and crisis accommodation",
+    " care homes and supported housing",
+    " renting a home",
+    " buying a home",
+    " support for veterans' spouses and partners",
+    " childcare and custody",
+    " support with relationships",
+    " domestic abuse",
+    " drop-ins and breakfast clubs",
+    " leisure activities",
+    " volunteering opportunities"],
     location: ["UK Wide"]
   },
   {
     name: "SSAFA",
     link: "https://www.ssafa.org.uk/",
+    number: "0800 260 6767",
     description: "SSAFA does not deliver medical, counselling or advocacy services, but can help with referral while offering practical support with a wide range of other issues.",
     helpsWith: ["mental health"],
     location: ["UK Wide"]
@@ -331,6 +329,8 @@ const orgs = [
   {
     name: "Stoll",
     link: "https://www.stoll.org.uk/",
+    number: "020 7385 2110",
+    email: "info@stoll.org.uk",
     description: "Provides support and access to social housing for veterans.",
     helpsWith: ["homelessness and crisis accommodation"],
     location: ["UK Wide"]
@@ -339,7 +339,7 @@ const orgs = [
     name: "Veterans Launchpad",
     link: "https://veteranslaunchpad.org.uk/",
     description: "Veterans Launchpad Provides accommodation and support to help veterans make a successful transition from military to civilian life.",
-    helpsWith: [],
+    helpsWith: ["care homes and supported housing"],
     location: ["UK Wide"]
   },
   {
@@ -348,5 +348,21 @@ const orgs = [
     description: "Walking with the Wounded supports veterans and their families with mental health, employment and care coordination following discharge from service.",
     helpsWith: ["mental health"],
     location: ["UK Wide"]
+  },
+  {
+    name: "Veterans First Point Scotland",
+    link: "https://www.veteransfirstpoint.org.uk/",
+    number: "0800 83 85 87",
+    email: "veterans.enquiries@nhslothian.scot.nhs.uk",
+    description: "A one-stop shop for veterans in Scotland, staffed by an alliance of clinicians and veterans. The service is free at the point of access and provided as part of the NHS. There are in house clinics from a range of providers and a Peer Support worker can organise supported onward referral where appropriate. ",
+    helpsWith: ["mental health"],
+    location: ["Northern Ireland wide"]
+  },
+  {
+    name: "Veterans Welfare Service Northern Ireland",
+    link: "https://aftercareservice.org/",
+    description: "The Veterans Welfare Service Northern Ireland (VWS NI) also known as the 'Aftercare Service' provides either directly or by sign-posting to other partner agencies, holistic welfare, medical, vocational and benevolence support to the veteran community in Northern Ireland.",
+    helpsWith: ["mental health, physical health, social care, pensions, compensation, benefits"],
+    location: ["Northern Ireland wide"]
   }
 ]
