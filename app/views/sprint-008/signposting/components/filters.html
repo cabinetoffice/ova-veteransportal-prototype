@@ -109,53 +109,36 @@
                 }) }}
       </details>
 
-      <details class="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-                Employment
-              </span>
-        </summary>
-        {{ govukCheckboxes({
-                  name: "employment",
-                  classes: "govuk-checkboxes--small",
-                  items: [
-                    {
-                      value: "transition support and career advice",
-                      text: "Transition support and career advice"
-                    },
-                    {
-                      value: "support for jobseekers",
-                      text: "Support for jobseekers"
-                    },
-                    {
-                      value: "starting a business",
-                      text: "Starting a business"
-                    }
-                  ]
-                }) }}
-      </details>
 
       <details class="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-                Education and training
+                Employment and training
               </span>
         </summary>
         {{ govukCheckboxes({
-                  name: "educationTraining",
+                  name: "employmentTraining",
                   classes: "govuk-checkboxes--small",
                   items: [
                     {
-                      value: "apprenticeships and in-work training",
-                      text: "Apprenticeships and in-work training"
+                      value: "transition support",
+                      text: "Transition support"
+                    },
+                    {
+                      value: "career advice and support for jobseekers",
+                      text: "Career advice and Support for jobseekers"
+                    },
+                    {
+                      value: "starting a business",
+                      text: "Starting a business"
+                    },
+                    {
+                      value: "apprenticeships",
+                      text: "Apprenticeships"
                     },
                     {
                       value: "other training and education",
                       text: "Other training and education"
-                    },
-                    {
-                      value: "bursaries, scholarships and grants",
-                      text: "Bursaries, scholarships and grants"
                     }
                   ]
                 }) }}

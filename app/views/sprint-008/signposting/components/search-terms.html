@@ -1,6 +1,6 @@
 {%block content%}
 
-<div class="search-terms">
+  <div class="search-terms">
     {%if data['health']%}
       <div class="search-about">
         <p>
@@ -40,12 +40,12 @@
       </div>
     {% endif %}
 
-     {%if data['employment']%}
+    {%if data['employmentTraining']%}
       <div class="search-about">
         <p>
           <strong>About</strong>
         </p>
-        {%for t in data['employment'] %}
+        {%for t in data['employmentTraining'] %}
           <div class="search-tag">
             <p> &#x2715; {{t}}</p>
           </div>
@@ -53,20 +53,7 @@
       </div>
     {% endif %}
 
-     {%if data['educationTraining']%}
-      <div class="search-about">
-        <p>
-          <strong>About</strong>
-        </p>
-        {%for t in data['educationTraining'] %}
-          <div class="search-tag">
-            <p> &#x2715; {{t}}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-
-     {%if data['housing']%}
+    {%if data['housing']%}
       <div class="search-about">
         <p>
           <strong>About</strong>
@@ -79,7 +66,7 @@
       </div>
     {% endif %}
 
-     {%if data['family']%}
+    {%if data['family']%}
       <div class="search-about">
         <p>
           <strong>About</strong>
@@ -92,7 +79,7 @@
       </div>
     {% endif %}
 
-     {%if data['community']%}
+    {%if data['community']%}
       <div class="search-about">
         <p>
           <strong>About</strong>
@@ -105,7 +92,7 @@
       </div>
     {% endif %}
 
-     {%if data['ukWide']%}
+    {%if data['ukWide']%}
       <div class="search-about">
         <p>
           <strong>In</strong>
@@ -131,7 +118,6 @@
       </div>
     {% endif %}
 
-
     {% if data['northernIreland']%}
       <div class="search-in">
         <p>
@@ -145,7 +131,6 @@
       </div>
     {% endif %}
 
-
     {% if data['scotland']%}
       <div class="search-in">
         <p>
@@ -158,7 +143,6 @@
         {% endfor %}
       </div>
     {% endif %}
-
 
     {% if data['wales']%}
       <div class="search-in">
@@ -175,4 +159,4 @@
 
   </div>
 
-{%endblock%}
+  {%endblock%}
