@@ -61,10 +61,15 @@
         {{r.description}}
       </p>
       <div id="charity-hint" class="govuk-hint charity">
-        Helps with: {{r.helpsWith}}
+        {% if r.helpsWith | length == 1 %}
+          Helps with: {{r.helpsWith}} 
+        {% else %}
+          Helps with: {{r.helpsWith[0]}} and more
+        {% endif%}
+
       </div>
       <div id="charity-hint" class="govuk-hint">
-        Location: {{r.location}}
+        Location: {{r.location[0]}}
       </div>
     </div>
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
